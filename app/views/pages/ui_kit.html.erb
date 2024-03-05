@@ -18,9 +18,15 @@
   </div>
 
   <p>All submit buttons</p>
-  <%= link_to "Submit", "#",  class:"btn btn-ghost btn-submit"%>
+  <div class="row">
+    <div class="col-12">
+      <%= link_to "Submit", "#",  class:"btn btn-ghost btn-submit d-flex align-items-center justify-content-center"%>
+    </div>
+  </div>
+
 
   <p>Homepage buttons</p>
+
   <%= link_to "Your profile", "#", class:"btn btn-flat btn-home"%>
   <%= link_to "Find mentor", "#", class:"btn btn-flat btn-home"%>
   <%= link_to "My mentor", "#", class:"btn btn-flat btn-home"%>
@@ -46,7 +52,7 @@
   <p>******************************************</p>
 
   <h5>Cards</h5 >
-    <div class="card mb-4 mb-xl-0" id="card-mentor">
+    <div class="card mb-4 mb-xl-0 card-swipe">
       <div class="card-header">Mentor</div>
         <div class="profile-picture-mentor mb-2">
           <p>mentor picture</p>
@@ -60,7 +66,7 @@
       </div>
     </div>
 
-    <div class="card mb-4 mb-xl-0" id="card-mentee">
+    <div class="card mb-4 mb-xl-0 card-swipe">
       <div class="card-header">Mentee</div>
         <div class="profile-picture-mentor mb-2">
           <p>mentee picture</p>
@@ -75,7 +81,7 @@
     </div>
 
 <p>this card is used for the mentor/mentee en achievements. add class/id en design yourself</p>
-  <div class="card">
+
     <div class="card-small">
       <%= link_to "picture of user", "#"%>
         <div class="card-small-infos">
@@ -83,5 +89,5 @@
           <p>💬   🏆</p>
         </div>
     </div>
-  </div>
+
 </div>
