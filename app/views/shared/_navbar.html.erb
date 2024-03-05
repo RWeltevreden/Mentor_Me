@@ -1,0 +1,23 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%# logo le wagon %>
+    <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "https://media.istockphoto.com/id/1493351005/nl/vector/mirror-disco-ball-with-glitters-icon-shining-nightclub-sphere-dance-music-party-discoball.jpg?s=612x612&w=0&k=20&c=KXj4wsIRpi--sYcDH_ypTLU5rySe5_nH9JfqLvziLHc=" %>
+    <% end %>
+
+    <%# login logic %>
+
+        <% if user_signed_in? %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        <% else %>
+
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        
+        <% end %>
+
+
+
+  </div>
+</div>
+
+</div>

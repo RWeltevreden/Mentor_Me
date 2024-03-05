@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def ui_kit
   end
+
+  def onboarding
+  end
 end
