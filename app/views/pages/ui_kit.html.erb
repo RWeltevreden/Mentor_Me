@@ -1,0 +1,87 @@
+<div class="container px-4 mt-4">
+<h1>UI Kitt for mentor me</h1>
+<p> MAKE ALL HTML FILES INSIDE CLASS="container px-4 mt-4</p>
+  <h2>All page titles in this style/also add the hr class=mt-0 mb-4 tag</h2>
+    <hr class="mt-0 mb-4">
+
+<p>******************************************</p>
+
+  <h5>Buttons</h5 >
+    <p>Sign up / sign in button</p>
+  <div class="row">
+    <div class="col-12">
+        <div class="signup d-flex align-items-center justify-content-center">
+          <p><%= link_to "Sign in", "#", class:"btn btn-ghost btn-sign text-center"%></p>
+          <p><%= link_to "Sign up", "#", class:"btn btn-ghost btn-sign text-center"%></p>
+        </div>
+    </div>
+  </div>
+
+  <p>All submit buttons</p>
+  <%= link_to "Submit", "#",  class:"btn btn-ghost btn-submit"%>
+
+  <p>Homepage buttons</p>
+  <%= link_to "Your profile", "#", class:"btn btn-flat btn-home"%>
+  <%= link_to "Find mentor", "#", class:"btn btn-flat btn-home"%>
+  <%= link_to "My mentor", "#", class:"btn btn-flat btn-home"%>
+  <%= link_to "Timeline", "#", class:"btn btn-flat btn-home"%>
+
+  <p>Reject button</p>
+  <%= link_to "Reject", "#", class:"btn btn-flat btn-reject"%>
+  <p>Accept button</p>
+  <%= link_to "Accept", "#", class:"btn btn-flat btn-accept"%>
+
+  <p>mentor/mentee button</p>
+    <%= link_to "I am a mentor", "#", class:"btn btn-flat btn-route"%>
+    <%= link_to "I am a mentee", "#", class:"btn btn-flat btn-route"%>
+  <br>
+  <p>******************************************</p>
+
+  <h5>Avatar</h5>
+  <p>still needs to be filled in</p>
+  <%# <div class="profile-picture mb-2">
+    <%= cl_image_tag current_user.avatar.key, class:"card-img-top rounded-circle", height: 300 if current_user.avatar.attached? %>
+  <%# </div> %>
+  <br>
+  <p>******************************************</p>
+
+  <h5>Cards</h5 >
+    <div class="card mb-4 mb-xl-0" id="card-mentor">
+      <div class="card-header">Mentor</div>
+        <div class="profile-picture-mentor mb-2">
+          <p>mentor picture</p>
+        </div>
+
+      <div class="card-body">
+        <p>mentor name</p>
+        <p>mentor role</p>
+        <p>mentor company</p>
+        <p>mentor bio</p>
+      </div>
+    </div>
+
+    <div class="card mb-4 mb-xl-0" id="card-mentee">
+      <div class="card-header">Mentee</div>
+        <div class="profile-picture-mentor mb-2">
+          <p>mentee picture</p>
+        </div>
+
+        <div class="card-body">
+          <p>mentee name</p>
+          <p>mentee role</p>
+          <p>mentee company</p>
+          <p>mentee bio</p>
+        </div>
+    </div>
+
+<p>this card is used for the mentor/mentee en achievements. add class/id en design yourself</p>
+  <div class="card">
+    <div class="card-small">
+      <%= link_to "picture of user", "#"%>
+        <div class="card-small-infos">
+          <h2>user name</h2>
+          <p>💬   🏆</p>
+        </div>
+    </div>
+  </div>
+</div>
