@@ -1,3 +1,5 @@
 class Mentee < ApplicationRecord
-  t.belongs_to :user
+  belongs_to :user
+
+  validates :goal, presence: true
 end
