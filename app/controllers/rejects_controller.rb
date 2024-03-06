@@ -1,2 +1,3 @@
 class RejectsController < ApplicationController
+
 end

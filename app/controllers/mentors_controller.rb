@@ -1,6 +1,8 @@
 class MentorsController < ApplicationController
 
   def index
+    @mentors = Mentor.where(rejected: false)
+
     @mentors = Mentor.all
   end
 
