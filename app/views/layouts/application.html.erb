@@ -24,24 +24,22 @@
 
   <div class="footer">
     <div class="footer-buttons">
-      <a href="/user_profile">
-      <i class="fa-regular fa-user fa-4x"></a></i>
-<%# <%= link_to "/dashboard"(current_user) %>
+    <%= link_to dashboard_path do %>
+      <i class="fa-regular fa-user fa-4x"></i>
+    <%end %>
 
-<%# <div class="footer">
-  <div class="footer-buttons">
-    <a href="/dashboard">
-      <i class="fa-regular fa-user fa-4x"></i> </a> %>
-      <%# <%= link_to dashboard_path(current_user) %>
+    <%= link_to root_path do %>
+      <i class="fa-solid fa-users fa-4x"></i>
+    <%end %>
 
-      <a href="/mentors">
-      <i class="fa-solid fa-users fa-4x"></i></a>
+    <%= link_to root_path do %>
+      <i class="fa-solid fa-timeline fa-4x"></i>
+    <%end %>
 
-      <a href="/timeline">
-      <i class="fa-solid fa-timeline fa-4x"></i></a>
+    <%= link_to destroy_user_session_path do %>
+      <i class="fa-solid fa-arrow-right-from-bracket fa-4x"></i>
+    <%end %>
 
-      <a href="/logout">
-      <i class="fa-solid fa-arrow-right-from-bracket fa-4x"></i></a>
     </div>
   </div>
 </html>
