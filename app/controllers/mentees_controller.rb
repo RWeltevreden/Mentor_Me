@@ -5,14 +5,15 @@ class MenteesController < ApplicationController
 
   def create
     @mentee = Mentee.new(mentee_params)
+    @mentee.user = current_user
     @mentee.save
 
-    redirect_to mentee_path(@mentee)
+    redirect_to root_path
   end
 
   private
-  
+
   def mentee_params
-    params.require(:mentee).permit(:first_name, :last_name, :email, :location)
+    params.require(:mentee).permit(:goal)
   end
 end

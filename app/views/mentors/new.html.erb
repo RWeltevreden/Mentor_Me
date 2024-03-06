@@ -1,12 +1,20 @@
 <div class="container px-4 mt-4">
+  <h2>Mentor</h2>
+    <hr class="mt-0 mb-4">
 
-  <%= form_with model: @restaurant do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-    <%= f.label :rating %>
-    <%= f.number_field :rating %>
-    <%= f.submit %>
+  <%= simple_form_for(@mentor, html: { multipart: true }) do |f| %>
+  <div class="form-inputs text-center">
+    <%= f.input :job_title,
+                required: false,
+                placeholder: "'developer'",
+                input_html: { autocomplete: "location", class:"input_html text-center" } %>
+     <%= f.input :company,
+                required: false,
+                placeholder: "'Google'",
+                input_html: { autocomplete: "location", class:"input_html text-center" } %>
+      <div class="form-actions">
+      <%= f.button :submit, "Create account", class: "btn btn-ghost btn-submit row justify-content-center" %>
+      </div>
   <% end %>
+  </div>
 </div>

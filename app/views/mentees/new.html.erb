@@ -6,10 +6,10 @@
   <div class="form-inputs text-center">
     <%= f.input :goal,
                 required: false,
-                placeholder: "Become a webdeveloper in 1 year",
+                placeholder: "(be explicit)",
                 input_html: { autocomplete: "location", class:"input_html text-center" } %>
       <div class="form-actions">
-      <%= f.button :submit, "Create account", class: "btn btn-primary" %>
+      <%= f.button :submit, "Create account", class: "btn btn-ghost btn-submit row justify-content-center" %>
       </div>
   <% end %>
   </div>

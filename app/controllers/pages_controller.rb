@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def onboarding
   end
+
+  def dashboard
+   @user = current_user
+  end
 end

@@ -5,14 +5,15 @@ class MentorsController < ApplicationController
 
   def create
     @mentor = Mentor.new(mentor_params)
+    @mentor.user = current_user
     @mentor.save
 
-    redirect_to mentor_path(@mentor)
+    redirect_to root_path
   end
 
   private
 
   def mentor_params
-    params.require(:mentor).permit(:first_name, :last_name, :email, :location)
+    params.require(:mentor).permit(:job_title, :company)
   end
 end
