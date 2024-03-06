@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   resources :mentees, only: [:new, :create]
 
-  resources :mentors, only: [:new, :create]
+  resources :mentors, only: [:new, :create, :index]
+
 
   #   resources :mentors, only: []
   #   resources :rejected, only: []
