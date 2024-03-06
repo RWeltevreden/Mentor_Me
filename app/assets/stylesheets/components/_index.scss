@@ -5,21 +5,22 @@
 @import "navbar";
 @import "btn";
 @import "cards";
+@import "swiper";
 
 
-body {
-  position: relative;
-  height: 100%;
-}
+// body {
+//   position: relative;
+//   height: 100%;
+// }
 
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   background: #eee;
+//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+//   font-size: 14px;
+//   color: #000;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .swiper-container {
   width: 100%;
@@ -29,7 +30,7 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  // background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,6 +47,8 @@ body {
   margin-right: 50px;;
 }
 
+
+
 // swiper-slide img {
 //   display: block;
 //   width: 100%;
@@ -54,4 +57,3 @@ body {
 // }
 
 @import "forms";
-

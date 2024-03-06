@@ -22,7 +22,7 @@
   <div class="swiper-pagination"></div>
   <div class="swiper-wrapper" style="height: 700px;">
     <% @mentors.each do |mentor| %>
-      <div class="swiper-slide">
+      <div class="swiper-slide" id="mentor" <%= mentor.id %>>
         <p>Profile picture</p>
         <p><%= mentor.user.first_name %></p>
         <p><%= mentor.job_title %></p>
@@ -33,7 +33,20 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
+
+
 <div class="buttons">
-  <p class="btn-reject">Reject</p>
-  <p class="btn-accept">Accept</p>
+  <button class="btn btn-flat btn-reject">Reject</button>
+  <button class="btn btn-flat btn-accept">Accept</button>
 </div>
+
