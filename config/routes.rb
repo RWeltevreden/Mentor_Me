@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # routes for ui kit
   get '/ui_kit', to: 'pages#ui_kit'
   get 'onboarding', to: 'pages#onboarding'
+  get '/dashboard', to: 'pages#dashboard'
 
 
   resources :mentees, only: [:new, :create]

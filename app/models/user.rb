@@ -6,4 +6,16 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  has_one :mentor
+  has_one :mentee
+
+  def is_mentor?
+    self.mentor != nil
+  end
+
+  def is_mentee?
+    self.mentee != nil
+  end
+
 end
