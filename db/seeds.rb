@@ -17,9 +17,8 @@ User.destroy_all
 user1 = User.create!({ email: "romeeweltevreden@hotmail.com",
         first_name: "Romee", last_name: "Weltevreden", location: "Amsterdam", password: "test123" })
 
-
 user2 = User.create!(email: "test@hotmail.com",
-        first_name: "test", last_name: "test", location: "Amsterdam", password: "test321")
+        first_name: "Name", last_name: "Last_Name", location: "Amsterdam", password: "test321")
 
 user3 = User.create!(email: "annakarsten@hotmail.com",
         first_name: "Anna", last_name: "Karsten", location: "Amsterdam", password: "TEST123")
