@@ -1,0 +1,39 @@
+
+<%#
+<swiper-container class="mySwiper" pagination="true">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+  </swiper-container> %>
+
+
+    <%# <swiper-container class="mySwiper" pagination="true">
+      <swiper-slide>Mentor1</swiper-slide>
+      <swiper-slide>Mentor2</swiper-slide>
+
+    </swiper-container> %>
+<div class="swiper mySwiper">
+  <div class="swiper-pagination"></div>
+  <div class="swiper-wrapper" style="height: 700px;">
+    <% @mentors.each do |mentor| %>
+      <div class="swiper-slide">
+        <p>Profile picture</p>
+        <p><%= mentor.user.first_name %></p>
+        <p><%= mentor.job_title %></p>
+        <p><%= mentor.user.location %></p>
+        <p>More information?</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="buttons">
+  <p class="btn-reject">Reject</p>
+  <p class="btn-accept">Accept</p>
+</div>
