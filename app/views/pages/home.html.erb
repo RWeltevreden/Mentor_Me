@@ -1,3 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# <% if user_signed_in? %>
+  <%# <% if current_user.mentor? %>
+    <%# <%= render 'mentors/show' %>
+  <%# <% else %>
+    <%# <%= render 'mentees/show' %>
+  <%# <% end %>
+
+<% if current_user.role == 'mentor' %>
+  <%= render 'mentors/show' %>
+<% else %>
+  <%= render 'mentees/show' %>
+<% end %>
 

@@ -11,6 +11,10 @@ class MenteesController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @mentee = Mentee.find(params[:id])
+  end
+
   private
 
   def mentee_params

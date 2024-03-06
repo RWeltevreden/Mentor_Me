@@ -12,9 +12,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
 
 
-  resources :mentees, only: [:new, :create]
-
-  resources :mentors, only: [:new, :create, :index]
+  resources :mentees, only: [:new, :create, :show]
+  resources :mentors, only: [:new, :create, :show, :index]
 
 
   #   resources :mentors, only: []
