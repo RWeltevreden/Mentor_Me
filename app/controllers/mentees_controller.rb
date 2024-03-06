@@ -10,8 +10,12 @@ class MenteesController < ApplicationController
     redirect_to mentee_path(@mentee)
   end
 
+  def show
+    @mentee = Mentee.find(params[:id])
+  end
+
   private
-  
+
   def mentee_params
     params.require(:mentee).permit(:first_name, :last_name, :email, :location)
   end

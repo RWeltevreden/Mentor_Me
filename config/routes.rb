@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   get 'onboarding', to: 'pages#onboarding'
 
 
-  resources :mentees, only: [:new, :create]
+  resources :mentees, only: [:new, :create, :show]
 
-  resources :mentors, only: [:new, :create]
+  resources :mentors, only: [:new, :create, :show]
 
   #   resources :mentors, only: []
   #   resources :rejected, only: []

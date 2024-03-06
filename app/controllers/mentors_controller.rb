@@ -10,6 +10,10 @@ class MentorsController < ApplicationController
     redirect_to mentor_path(@mentor)
   end
 
+  def show
+    @mentor = Mentor.find(params[:id])
+  end
+
   private
 
   def mentor_params
