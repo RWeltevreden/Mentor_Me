@@ -13,18 +13,20 @@
 }
 
 .btn-submit {
-  color: white;
+  color: $lighter;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 50px;
   font-weight: lighter;
-  background: #670BFF;
+  background: #548C85;
   transition:0.3s ease;
+  height: 40px;
+  width: 275px;
 }
 
 .btn-submit:hover{
-  background: #4D04C4;
-  color: white;
+  background: #CCE0DE;
+  color: $lighter;
 }
 
 .btn-home {
@@ -157,15 +159,19 @@
 }
 
 .btn-route {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
+  color: $lighter;
+  padding: 10px 20px;
+  font-size: 18px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  background: #548C85;
+  transition:0.3s ease;
+  height: 45px;
+  width: 280px;
+  margin-bottom: 20px;
 }
 
-.btn-route:hover {
-  opacity: 1;
+.btn-submit:hover{
+  background: #CCE0DE;
+  color: $lighter;
 }
