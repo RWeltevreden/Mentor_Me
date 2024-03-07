@@ -14,8 +14,9 @@ Rails.application.routes.draw do
 
   resources :mentees, only: [:new, :create, :show]
   resources :mentors, only: [:new, :create, :show, :index]
-
-
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
   #   resources :mentors, only: []
   #   resources :rejected, only: []
   # end
