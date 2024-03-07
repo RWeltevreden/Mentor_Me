@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
   resources :tasks, only: [:edit, :update, ]
 
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+
   #   resources :mentors, only: []
   #   resources :rejected, only: []
   # end
