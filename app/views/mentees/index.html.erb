@@ -1,0 +1,6 @@
+ <% @mentors.each do |mentor| %>
+  <% if mentor.accepted?%>
+          <%= cl_image_tag mentor.photo.key, class:"card-img", height: 300 %>
+        <% end %>
+<%end%>
+

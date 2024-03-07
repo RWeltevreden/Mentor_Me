@@ -3,6 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+import "@rails/actioncable"
+
 
 // document.addEventListener('DOMContentLoaded', (event) => {
 //   var mySwiper = new Swiper('.mySwiper', {

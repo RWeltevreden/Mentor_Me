@@ -1,4 +1,5 @@
 class ConnectionsController < ApplicationController
+
   def create
     @connection = Connection.new(connection_params)
 
@@ -15,5 +16,12 @@ class ConnectionsController < ApplicationController
 
   def connection_params
     params.require(:connection).permit(:mentee_id, :mentor_id, :status)
+  end
+
+  def show
+    @connection = Connection.find(params[:id])
+    @mentor = @connection.mentor
+    @mentee = @connection.mentee
+
   end
 end

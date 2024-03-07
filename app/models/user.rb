@@ -25,4 +25,7 @@ class User < ApplicationRecord
     self.mentee != nil
   end
 
+  def name
+    return "#{first_name} #{last_name}"
+  end
 end
