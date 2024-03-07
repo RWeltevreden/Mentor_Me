@@ -14,32 +14,10 @@
   </head>
 
   <body>
-        <%= render "shared/navbar" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <%= yield %>
+   <%# <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> %>
+  <%= render "shared/navbar" %>
+  <%= yield %>
 
-    <%# <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> %>
+<%= render 'shared/footer' if current_user %>
   </body>
-
-  <div class="footer">
-    <div class="footer-buttons">
-    <%= link_to dashboard_path do %>
-      <i class="fa-regular fa-user fa-4x"></i>
-    <%end %>
-
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-users fa-4x"></i>
-    <%end %>
-
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-timeline fa-4x"></i>
-    <%end %>
-
-    <%= link_to destroy_user_session_path do %>
-      <i class="fa-solid fa-arrow-right-from-bracket fa-4x"></i>
-    <%end %>
-
-    </div>
-  </div>
 </html>
