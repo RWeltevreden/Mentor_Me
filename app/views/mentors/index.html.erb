@@ -4,16 +4,23 @@
   <div class="swiper-wrapper">
     <% @mentors.each do |mentor| %>
       <div class="swiper-slide">
+
         <p>Profile picture</p>
         <p><%= mentor.user.first_name %></p>
         <p><%= mentor.job_title %></p>
         <p><%= mentor.user.location %></p>
+
+
+        <div class="buttons" style="display: flex; justify-content: space-between; align-items: center;" >
+        <button class="btn btn-flat btn-reject">Reject</button>
         <%= simple_form_for (@connection) do |f| %>
         <%= f.input :mentor_id, as: :hidden, input_html: { value: mentor.id} %>
          <%= f.input :mentee_id, as: :hidden, input_html: { value: current_user.mentee.id} %>
         <%= f.input :status, as: :hidden, input_html: { value: true} %>
-        <%= f.button :submit %>
+        <%= f.button :submit, "Accept", class:"btn btn-flat btn-accept" %>
         <% end %>
+        </div>
+
       </div>
     <% end %>
   </div>
@@ -32,7 +39,7 @@
 </script>
 
 
-<div class="buttons">
+<%# <div class="buttons">
   <button class="btn btn-flat btn-reject">Reject</button>
-  <button type="submit" id= "accept-button" class="btn btn-flat btn-accept">Accept</button>
-</div>
+  <button type="submit"  class="btn btn-flat btn-accept">Accept</button>
+</div> %>
