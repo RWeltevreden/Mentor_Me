@@ -1,36 +1,23 @@
 
-<%#
-<swiper-container class="mySwiper" pagination="true">
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide>
-    <swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide>
-    <swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide>
-    <swiper-slide>Slide 9</swiper-slide>
-  </swiper-container> %>
-
-
-    <%# <swiper-container class="mySwiper" pagination="true">
-      <swiper-slide>Mentor1</swiper-slide>
-      <swiper-slide>Mentor2</swiper-slide>
-
-    </swiper-container> %>
 <div class="swiper mySwiper">
   <div class="swiper-pagination"></div>
-  <div class="swiper-wrapper" style="height: 700px;">
+  <div class="swiper-wrapper">
     <% @mentors.each do |mentor| %>
-      <div class="swiper-slide" id="mentor" <%= mentor.id %>>
+      <div class="swiper-slide">
         <p>Profile picture</p>
         <p><%= mentor.user.first_name %></p>
         <p><%= mentor.job_title %></p>
         <p><%= mentor.user.location %></p>
-        <p>More information?</p>
+        <%= simple_form_for (@connection) do |f| %>
+        <%= f.input :mentor_id, as: :hidden, input_html: { value: mentor.id} %>
+         <%= f.input :mentee_id, as: :hidden, input_html: { value: current_user.mentee.id} %>
+        <%= f.input :status, as: :hidden, input_html: { value: true} %>
+        <%= f.button :submit %>
+        <% end %>
       </div>
     <% end %>
   </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -47,6 +34,5 @@
 
 <div class="buttons">
   <button class="btn btn-flat btn-reject">Reject</button>
-  <button class="btn btn-flat btn-accept">Accept</button>
+  <button type="submit" id= "accept-button" class="btn btn-flat btn-accept">Accept</button>
 </div>
-
