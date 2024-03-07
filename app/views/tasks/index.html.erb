@@ -1,0 +1,21 @@
+<div class="container px-4 mt-4">
+    <h2>Tasks</h2>
+      <hr class="mt-0 mb-4">
+
+    <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.title, connection_task_path(@connection, task) %></li>
+    <% end %>
+    </ul>
+
+    <div class="row">
+      <div class="col-12">
+        <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit d-flex align-items-center justify-content-center"%>
+      </div>
+    </div>
+
+
+   <h2><%= @mentee.goal %></h2>
+
+
+</div>

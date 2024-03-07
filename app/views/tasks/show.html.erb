@@ -1,0 +1,13 @@
+<div class="container px-4 mt-4">
+    <h2>Task</h2>
+      <hr class="mt-0 mb-4">
+
+<h2><%= @task.title %></h2>
+<p><%= @task.description %></p>
+<p><%= @task.end_date %></p>
+
+<%= link_to "Edit", edit_task_path, class: "btn btn-ghost btn-submit d-flex align-items-center justify-content-center"%>
+<%= link_to "Delete",connection_task_path(@connection, @task),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-ghost btn-submit d-flex align-items-center justify-content-center"%>
+<%= link_to "Back to tasks",connection_tasks_path(@connection), class: "btn btn-ghost btn-submit d-flex align-items-center justify-content-center" %>
+</div>

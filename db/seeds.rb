@@ -27,6 +27,7 @@ user4 = User.create!(email: "test1@hotmail.com",
         first_name: "Anna", last_name: "Karsten", location: "Amsterdam", password: "TEST123")
 
 
+
 # Create a mentor
 mentor1 = Mentor.create!(job_title: "Software Developer", company: "le wagon", rating: 3, user: user2)
 mentor2 = Mentor.create!(job_title: "Software Engineer", company: "le wagon", rating: 4, user: user3)
@@ -37,3 +38,14 @@ mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon",
 
 # Create a mentee
 mentee1 = Mentee.create!(goal: "I want to become a developer within 1 year", user: user1)
+
+
+# Create a connection
+connection = Connection.create!(mentor: mentor1, mentee: mentee1, status: true)
+
+
+# Create a task
+task1 = Task.create!(title: "Learn Ruby", description: "Learn Ruby", end_date: "2021-12-01", completed: false, connection: connection)
+# Task.create!(title: "Learn Ruby on Rails", description: "Learn Ruby on Rails", end_date: "2021-12-01")
+# Task.create!(title: "Learn JavaScript", description: "Learn JavaScript", end_date: "2021-12-01")
+# Task.create!(title: "Learn React", description: "Learn React", end_date: "2021-12-01")
