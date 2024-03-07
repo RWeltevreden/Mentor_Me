@@ -13,6 +13,7 @@ class MenteesController < ApplicationController
 
   def show
     @mentee = Mentee.find(params[:id])
+    @connection
   end
 
   private

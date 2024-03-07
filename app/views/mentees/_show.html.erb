@@ -1,12 +1,15 @@
 <div class="container px-4 mt-4">
 <h3 class="mt-0 mb-4">My Mentor</h3>
-
 <div class="card-small card-small-green">
   <%= link_to "picture of user", "#" %>
   <div class="card-small-infos">
-    <h2>user name</h2>
+    <% if @connections.any? %>
+        <h2><%= @connections[0].mentor.user.first_name %></h2>
+      <% else %>
+        <h2><%= link_to 'choose your mentor', mentors_path %></h2>
+      <% end %>
     <p>💬 🏆</p>
-  </div>
+  </div>`
 </div>
 
 <br>
