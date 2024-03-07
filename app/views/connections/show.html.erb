@@ -1,0 +1,5 @@
+<% if current_user.role == "mentee" %>
+  <%= render 'mentors/show_mentee' %>
+<% else %>
+  <%= render 'mentees/show_mentor' %>
+<% end %>

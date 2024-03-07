@@ -6,8 +6,7 @@
   <%# <% end %>
 
 <% if current_user.role == 'mentor' %>
-  <%= render 'mentors/show' %>
+  <%= render 'mentors/my_mentees' %>
 <% else %>
-  <%= render 'mentees/show' %>
+  <%= render 'mentees/my_mentors' %>
 <% end %>
-
