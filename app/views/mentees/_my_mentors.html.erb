@@ -2,47 +2,31 @@
 
 <h3 class="mt-0 mb-4">My Mentor</h3>
 <div class="card-small card-small-green">
-  <%= link_to "picture of user", connection_path(@connection) %>
+  <% if @connection %>
+    <%= link_to "picture of user", connection_path(@connection) %>
+  <% end %>
   <div class="card-small-infos">
   <%# to do: merge info %>
 
-    <% if @connection.present? && @connection.any? %>
-      <h2><%= @connection[0].mentor.user.first_name %></h2>
-    <% else %>
-      <h2><%= link_to 'choose your mentor', mentors_path %></h2>
-    <% end %>
+
+  <% if @connection %>
+    <h2><%= @connection.mentor.user.first_name %></h2>
+  <% else %>
+    <h2><%= link_to 'choose your mentor', mentors_path %></h2>
+  <% end %>
 
     <p>💬 🏆</p>
   </div>`
     <h2>user name</h2>
-    <%= link_to chatroom_path(Chatroom.last) do %>
-      <i class="fa-regular fa-message fa-3x"></i>
-    <% end %>
-    <%= link_to connection_tasks_path(@connection) do %>
-      <i class="fa-solid fa-timeline"></i>
-    <% end %>
-    <p> 🏆</p>
-
-  <h3 class="mt-0 mb-4">My Mentor</h3>
-  <div class="card-small card-small-green">
-    <%= link_to "picture of user", "#" %>
-    <div class="card-small-infos">
-      <% if @connection.present? && @connection.any? %>
-        <h2><%= @connection[0].mentor.user.first_name %></h2>
-      <% else %>
-        <h2><%= link_to 'choose your mentor', mentors_path %></h2>
-      <% end %>
-      <p> 🏆</p>
-    </div>
-
-    <div class="card-small-message-icon">
-      <h2>user name</h2>
+    <% if @connection %>
       <%= link_to chatroom_path(Chatroom.last) do %>
-        <i class="fa-regular fa-message fa-3x message-icon"></i>
+        <i class="fa-regular fa-message fa-3x"></i>
+      <% end %>
+      <%= link_to connection_tasks_path(@connection) do %>
+        <i class="fa-solid fa-timeline"></i>
       <% end %>
       <p> 🏆</p>
-    </div>
-
+    <% end %>
   </div>
 </div>
 
@@ -72,5 +56,4 @@
           <p>💬   🏆</p>
         </div>
     </div>
-
-  </div>
+</div>
