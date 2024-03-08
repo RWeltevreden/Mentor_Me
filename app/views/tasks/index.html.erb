@@ -4,18 +4,19 @@
 
     <ul>
     <% @tasks.each do |task| %>
-      <li><%= link_to task.title, connection_task_path(@connection, task) %></li>
+      <li><%= link_to task.title, connection_task_path(@connection, task), class: "task" %></li>
     <% end %>
     </ul>
 
     <div class="row">
-      <div class="col-12">
-        <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit d-flex align-items-center justify-content-center"%>
+      <div class="col-12 d-flex justify-content-center ">
+        <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center"%>
       </div>
     </div>
-
-
-   <h2><%= @mentee.goal %></h2>
-
+ <br>
+<div class="goal text-center">
+    <h5>Main goal:</h5>
+    <h6><%= @mentee.goal %></h6>
+</div>
 
 </div>
