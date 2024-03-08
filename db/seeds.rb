@@ -42,6 +42,7 @@ mentee1 = Mentee.create!(goal: "I want to become a developer within 1 year", use
 
 # Create a connection
 connection = Connection.create!(mentor: mentor1, mentee: mentee1, status: true)
+chatroom = Chatroom.create!(connection: connection)
 
 
 # Create a task
