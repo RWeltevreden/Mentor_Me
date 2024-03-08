@@ -26,6 +26,9 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
+  # resources :chatrooms, only: [:show]
+
+
   #   resources :mentors, only: []
   #   resources :rejected, only: []
   # end
