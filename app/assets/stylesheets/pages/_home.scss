@@ -1,11 +1,8 @@
 // Specific CSS for your home-page
 
+
 .card-small-green {
   background-color: #548C85;
-}
-
-.card-small-gray {
-  background-color: #F3F7F7;
 }
 
 h3 {
@@ -14,4 +11,10 @@ h3 {
   font-weight: bold;
 }
 
+.card-small-message-icon {
+  /* Add styling for the right side of the card */
+}
 
+.message-icon {
+  color: white;
+}

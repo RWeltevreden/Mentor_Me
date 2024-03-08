@@ -1,5 +1,5 @@
-<% if current_user.role == "mentee" %>
+<% if current_user.role == "mentor" %>
   <%= render 'mentors/show_mentee' %>
 <% else %>
-  <%= render 'mentees/show_mentor' %>
+  <%= render 'mentees/show_mentor', locals: {mentor: @mentor} %>
 <% end %>

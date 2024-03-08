@@ -3,9 +3,8 @@ class PagesController < ApplicationController
     @current_user_role = current_user.role
     if @current_user_role == "mentee"
      @connection = current_user.mentee.connection
-    # @role = mentee || mentor
     else
-      @connection = current_user.mentor.connections
+      @connection = current_user.mentor.connection
     end
 
   end

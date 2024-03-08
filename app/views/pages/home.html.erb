@@ -5,6 +5,15 @@
     <%# <%= render 'mentees/show' %>
   <%# <% end %>
 
+<div class="container px-4 mt-4">
+  <% if current_user.role == 'mentor' %>
+    <%= render 'mentors/my_mentees' %>
+  <% else %>
+    <%= render 'mentees/my_mentors' %>
+  <% end %>
+</div>
+
+
 <% if current_user.role == 'mentor' %>
   <%= render 'mentors/my_mentees' %>
 <% else %>
