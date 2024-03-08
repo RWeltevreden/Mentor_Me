@@ -2,12 +2,11 @@ class PagesController < ApplicationController
   def home
     @current_user_role = current_user.role
     if @current_user_role == "mentee"
-     @connections = current_user.mentee.connections
-    # @role = mentee || mentor
+     @connection = current_user.mentee.connection
     else
-      @connections = current_user.mentor.connections
+      @connection = current_user.mentor.connection
     end
-  
+
   end
 
   def ui_kit
