@@ -8,7 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
+Chatroom.destroy_all
+Task.destroy_all
+Connection.destroy_all
 Mentor.destroy_all
 Mentee.destroy_all
 User.destroy_all
