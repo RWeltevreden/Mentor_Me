@@ -26,13 +26,13 @@ user3 = User.create!(email: "annakarsten@hotmail.com",
         first_name: "Anna", last_name: "Karsten", location: "Amsterdam", password: "TEST123")
 
 user4 = User.create!(email: "test1@hotmail.com",
-        first_name: "Anna", last_name: "Karsten", location: "Amsterdam", password: "TEST123")
+        first_name: "Test", last_name: "TEST", location: "Amsterdam", password: "TEST123")
 
 
 
 # Create a mentor
-mentor1 = Mentor.create!(job_title: "Software Developer", company: "le wagon", rating: 3, user: user2)
-mentor2 = Mentor.create!(job_title: "Software Engineer", company: "le wagon", rating: 4, user: user3)
+mentor1 = Mentor.create!(job_title: "Software Developer", company: "le wagon", rating: 3, user: user3)
+mentor2 = Mentor.create!(job_title: "Software Engineer", company: "le wagon", rating: 4, user: user2)
 mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon", rating: 4, user: user4)
 
 
