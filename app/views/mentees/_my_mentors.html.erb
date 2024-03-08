@@ -5,11 +5,13 @@
   <%= link_to "picture of user", connection_path(@connection) %>
   <div class="card-small-infos">
   <%# to do: merge info %>
-    <% if @connection %>
-        <h2><%= @connection.mentor.user.first_name %></h2>
-      <% else %>
-        <h2><%= link_to 'choose your mentor', mentors_path %></h2>
-      <% end %>
+
+    <% if @connection.present? && @connection.any? %>
+      <h2><%= @connection[0].mentor.user.first_name %></h2>
+    <% else %>
+      <h2><%= link_to 'choose your mentor', mentors_path %></h2>
+    <% end %>
+
     <p>💬 🏆</p>
   </div>`
     <h2>user name</h2>
