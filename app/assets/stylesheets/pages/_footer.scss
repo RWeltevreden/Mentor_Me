@@ -9,21 +9,6 @@
   position: absolute, sticky;
 }
 
-footer {
-  background: #CCE0DE;
-  font-family: 'Source Sans Pro', sans-serif;
-  position: absolute, sticky;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  width: 100%;
-  padding: 10px;
-  margin-top: auto; /* Push the footer to the bottom */
-  // text-align: center;
-}
-
 .footer-buttons {
   display: flex;
   justify-content: space-between;
