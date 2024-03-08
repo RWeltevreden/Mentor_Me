@@ -1,22 +1,20 @@
-  <div class="footer footer-expand-sm">
-    <div class="container-fluid">
-    <div class="footer-buttons">
-    <%= link_to dashboard_path do %>
-      <i class="fa-regular fa-user fa-4x"></i>
-    <%end %>
 
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-users fa-4x"></i>
-    <%end %>
+    <div class="footer footer-expand-sm">
+      <div class="container-fluid">
+        <div class="footer-buttons">
 
-    <%= link_to root_path do %>
-      <i class="fa-solid fa-timeline fa-4x"></i>
-    <%end %>
+          <%= link_to root_path do %>
+            <i class="fa-solid fa-house fa-4x"></i>
+          <%end %>
 
-    <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
-      <i class="fa-solid fa-arrow-right-from-bracket fa-4x"></i>
-    <%end %>
+          <%= link_to dashboard_path do %>
+            <i class="fa-regular fa-user fa-4x"></i>
+          <%end %>
 
+          <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-4x"></i>
+          <%end %>
+
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
