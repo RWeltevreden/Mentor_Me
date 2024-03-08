@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     @current_user_role = current_user.role
     if @current_user_role == "mentee"
-     @connection = current_user.mentee.connection
+    @connection = current_user.mentee.connection
 
     # @role = mentee || mentor
 
