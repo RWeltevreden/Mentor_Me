@@ -1,24 +1,24 @@
 <div class="container px-4 mt-4">
-    <h2>Edit task</h2>
-      <hr class="mt-0 mb-4">
+      <h2>Edit task</h2>
+        <hr class="mt-0 mb-4">
 
-  <%= simple_form_for([@connection, @task], html: { multipart: true }) do |f| %>
-  <div class="form-inputs text-center">
-    <%= f.input :title,
-                required: false,
-                placeholder: "title of task",
-                input_html: { autocomplete: "title", class:"input_html text-center" } %>
-    <%= f.input :description,
-                required: false,
-                placeholder: "description of task",
-                input_html: { autocomplete: "description", class:"input_html text-center" } %>
-    <%= f.input :end_date,
-                required: false,
-                placeholder: "end date",
-                input_html: { autocomplete: "end_date", class:"input_html text-center" } %>
-      <div class="form-actions">
-      <%= f.button :submit, "Edit task", class: "btn btn-ghost btn-submit row justify-content-center" %>
-      </div>
-  <% end %>
-</div>
+    <%= simple_form_for([@connection, @task], html: { multipart: true }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :title,
+                    required: false,
+                    placeholder: "title of task",
+                    input_html: { autocomplete: "title", class:"input_html text-center" } %>
+        <%= f.input :description,
+                    required: false,
+                    placeholder: "description of task",
+                    input_html: { autocomplete: "description", class:"input_html text-center" } %>
+        <%= f.input :end_date,
+                    required: false,
+                    placeholder: "end date",
+                    input_html: { autocomplete: "end_date", class:"input_html text-center" } %>
+          <div class="form-actions">
+          <%= f.button :submit, "Edit task", class: "btn btn-ghost btn-submit row justify-content-center" %>
+          </div>
+      <% end %>
+     </div>
 </div>
