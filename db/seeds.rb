@@ -26,19 +26,19 @@ user3 = User.create!(email: "annakarsten@hotmail.com",
         first_name: "Anna", last_name: "Karsten", location: "Haarlem", password: "TEST123")
 
 user4 = User.create!(email: "test1@hotmail.com",
-        first_name: "Test", last_name: "TEST", location: "Amsterdam", password: "TEST123")
+        first_name: "Test", last_name: "TEST", location: "Amsterdam", bio: "I'm a Front-End Developer at Google. Specializing in HTML, CSS, and JavaScript, I'm dedicated to elevating user interfaces and optimizing customer interactions. Committed to delivering cutting-edge design and functionality that enhances the Googlr experience. Let's innovate together in the world of e-commerce! 💻🌐✨", password: "TEST123")
 
 user5 = User.create!(email: "testing@hotmail.com",
-        first_name: "Test", last_name: "Ing", location: "Amstelveen", password: "TEST001")
+        first_name: "Test", last_name: "Ing", location: "Amstelveen", bio: "Hey, I'm a Back-End Developer passionate about constructing robust server-side solutions. Proficient in languages like Python, Java, and frameworks like Django. From databases to APIs, I thrive on optimizing functionality behind the scenes. Let's bring efficiency to the digital realm, one line of code at a time! 🚀✨", password: "TEST001")
 
 user6 = User.create!(email: "fake@hotmail.com",
-        first_name: "Fake", last_name: "Name", location: "Ouderkerk aan de Amstel", password: "TEST123")
+        first_name: "Fake", last_name: "Name", location: "Ouderkerk aan de Amstel", bio: "Greetings! I'm a dedicated product enthusiast committed to translating ideas into impactful solutions. With a passion for user-centric design and agile methodologies, I navigate the intersection of business goals and customer needs. Let's create products that resonate and drive meaningful change! 🌐✨", password: "TEST123")
 
 user7 = User.create!(email: "romeew@hotmail.com",
-        first_name: "Romee", last_name: "Weltevreden", location: "Amsterdam", password: "TEST123") #(DEMO DAY mentor)
+        first_name: "Romee", last_name: "Weltevreden", location: "Amsterdam", bio: "Enthusiastic Fullstack Developer with a passion for building seamless web applications. Proficient in HTML, CSS, JavaScript, Node.js, and SQL/NoSQL databases. Committed to continuous learning, I thrive on solving complex problems and contributing to the developer community. Let's craft innovative solutions and shape the future of technology together! 💻✨", password: "TEST123") #(DEMO DAY mentor)
 
 user8 = User.create!(email: "annap@hotmail.com",
-        first_name: "Anna", last_name: "Putt", location: "Amsterdam", password: "TEST123") #(DEMO DAY menteeeeeee)
+        first_name: "Anna", last_name: "Putt", location: "Amsterdam", bio:"Hello, I'm [Developer's Name], an aspiring developer embarking on a journey into the captivating world of coding. Armed with a zeal for learning, I'm diving into HTML, CSS, and JavaScript, eager to build my foundation. Excited to grow, collaborate, and turn imaginative ideas into tangible digital experiences.", password: "TEST123") #(DEMO DAY menteeeeeee)
 
 
 
@@ -46,16 +46,16 @@ user8 = User.create!(email: "annap@hotmail.com",
 mentor1 = Mentor.create!(job_title: "Software Developer", company: "le wagon", rating: 3, user: user1)
 mentor2 = Mentor.create!(job_title: "Software Engineer", company: "le wagon", rating: 4, user: user2)
 mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon", rating: 4, user: user3)
-mentor4 = Mentor.create!(job_title: "Front-End Developer", company: "Google", bio: "I'm a Front-End Developer at Google. Specializing in HTML, CSS, and JavaScript, I'm dedicated to elevating user interfaces and optimizing customer interactions. Committed to delivering cutting-edge design and functionality that enhances the Googlr experience. Let's innovate together in the world of e-commerce! 💻🌐✨", rating: 3, user: user4)
-mentor5 = Mentor.create!(job_title: "Back-End Developer", company: "Amazon", bio: "Hey, I'm a Back-End Developer passionate about constructing robust server-side solutions. Proficient in languages like Python, Java, and frameworks like Django. From databases to APIs, I thrive on optimizing functionality behind the scenes. Let's bring efficiency to the digital realm, one line of code at a time! 🚀✨", rating: 4, user: user5)
-mentor6 = Mentor.create!(job_title: "Product Owner", company: "Tesla", bio: "Greetings! I'm a dedicated product enthusiast committed to translating ideas into impactful solutions. With a passion for user-centric design and agile methodologies, I navigate the intersection of business goals and customer needs. Let's create products that resonate and drive meaningful change! 🌐✨", rating: 5, user: user6)
-mentor7 = Mentor.create!(job_title: "Full-Stack developer", company: "Uber", bio:"Enthusiastic Fullstack Developer with a passion for building seamless web applications. Proficient in HTML, CSS, JavaScript, Node.js, and SQL/NoSQL databases. Committed to continuous learning, I thrive on solving complex problems and contributing to the developer community. Let's craft innovative solutions and shape the future of technology together! 💻✨", rating: 4, user: user7)
+mentor4 = Mentor.create!(job_title: "Front-End Developer", company: "Google", rating: 3, user: user4)
+mentor5 = Mentor.create!(job_title: "Back-End Developer", company: "Amazon",  rating: 4, user: user5)
+mentor6 = Mentor.create!(job_title: "Product Owner", company: "Tesla",  rating: 5, user: user6)
+mentor7 = Mentor.create!(job_title: "Full-Stack developer", company: "Uber", rating: 4, user: user7)
 
 
 # mentor1.user = user1
 
 # Create a mentee
-mentee1 = Mentee.create!(goal: "Find a job in webdevelopment within 6 moths", bio:"Hello, I'm [Developer's Name], an aspiring developer embarking on a journey into the captivating world of coding. Armed with a zeal for learning, I'm diving into HTML, CSS, and JavaScript, eager to build my foundation. Excited to grow, collaborate, and turn imaginative ideas into tangible digital experiences." user: user8)
+mentee1 = Mentee.create!(goal: "Find a job in webdevelopment within 6 moths", user: user8)
 # mentee2 = Mentee.create!(goal: "I am going to become an experienced developer within 16 months", user: user3)
 # mentee3 = Mentee.create!(goal: "I am	going to find a front-end job in 6 months", user: user4)
 # mentee4 = Mentee.create!(goal: "I am going to become a full-stack developer within 1 year", user: user5)
