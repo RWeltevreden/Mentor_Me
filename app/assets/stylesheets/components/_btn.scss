@@ -77,7 +77,7 @@
 .btn-accept {
   appearance: none;
   backface-visibility: hidden;
-  background-color: green;
+  background-color:  $medium;
   border-radius: 8px;
   border-style: none;
   box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
@@ -106,7 +106,7 @@
 }
 
 .btn-accept:hover {
-  background-color: green;
+  background-color:  $medium;
   opacity: 1;
   transform: translateY(0);
   transition-duration: .35s;
@@ -119,7 +119,7 @@
 .btn-reject {
   appearance: none;
   backface-visibility: hidden;
-  background-color: red;
+  background-color:  $medium;
   border-radius: 8px;
   border-style: none;
   box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
@@ -148,7 +148,7 @@
 }
 
 .btn-reject:hover {
-  background-color: red;
+  background-color: $medium;
   opacity: 1;
   transform: translateY(0);
   transition-duration: .35s;
@@ -174,4 +174,15 @@
 .btn-submit:hover{
   background: #CCE0DE;
   color: $lighter;
+}
+
+.btn-pp {
+  width: 170px;
+  font-size: 12px;
+}
+
+#mentee-profile {
+  button {
+    border: none;
+  }
 }

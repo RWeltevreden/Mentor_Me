@@ -17,20 +17,21 @@ Rails.application.routes.draw do
   resources :mentors, only: [:new, :create, :show, :index]
 
   resources :connections, only: [:show] do
-    resources :tasks, only: [:index, :new, :create,:destroy,:show]
+    resources :tasks, only: [:index, :new, :create,:show, :destroy,:update]
   end
 
-  resources :tasks, only: [:edit, :update, ]
+  resources :tasks, only: [:edit ]
+  put 'mark_as_done/:id', to: 'tasks#mark_as_done', as: :mark_as_done_task
 
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
 
-  resources :tasks do
-    member do
-      put 'mark_as_done', to: 'tasks#mark_as_done'
-    end
-  end
+  # resources :tasks do
+  #   member do
+  #     put 'mark_as_done', to: 'tasks#mark_as_done'
+  #   end
+  # end
   #   resources :mentors, only: []
   #   resources :rejected, only: []
   # end

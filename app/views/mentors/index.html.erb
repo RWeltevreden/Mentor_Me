@@ -1,22 +1,22 @@
+<br>
+<div class="container px-4 mt-4">
+
 
 <div class="swiper mySwiper">
   <div class="swiper-pagination" data-controller='swiper'></div>
   <div class="swiper-wrapper">
     <% @mentors.each do |mentor| %>
-      <div class="swiper-slide">
+      <div class="swiper-slide text-center">
 
-        <p>Placeholder avatar</p>
-        <p><%= mentor.user.avatar_url %></p>
-      <form class="bio">
-        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.user.first_name%> <%= value=mentor.user.last_name%>" disabled>
-        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.job_title %>" disabled>
-        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.company %>" disabled>
-        <textarea class="form-control input_html text-center" id="inputCompany" placeholder="<%= mentor.user.bio %>" disabled rows="8" cols="50"></textarea>
-        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.user.location %>" disabled>
+         <%= image_tag mentor.user.avatar_url, class:"avatar-swipe " %>
+
+      <form class="bio mt-4">
+        <input class="form-control input_html text-center swipe-input" id="import-input" type="text" placeholder="<%= value=mentor.user.first_name%> <%= value=mentor.user.last_name%>" disabled>
+        <input class="form-control input_html text-center swipe-input" id="inputCompany" type="text" placeholder="<%= value=mentor.job_title %>" disabled>
+        <input class="form-control input_html text-center swipe-input" id="inputCompany" type="text" placeholder="<%= value=mentor.company %>" disabled>
+        <input class="form-control input_html text-center swipe-input" id="inputCompany" type="text" placeholder="<%= value=mentor.user.location %>" disabled></p>
+        <textarea class="form-control input_html text-center swipe-input" id="inputCompany" placeholder="<%= mentor.user.bio %>" disabled rows="8" cols="50"></textarea>
         </form>
-
-
-
 
       </div>
     <% end %>
@@ -39,4 +39,5 @@
 <div class="buttons">
   <button class="btn btn-flat btn-reject">Reject</button>
   <button type="submit"  class="btn btn-flat btn-accept">Accept</button>
+</div>
 </div>

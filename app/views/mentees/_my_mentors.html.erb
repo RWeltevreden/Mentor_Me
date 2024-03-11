@@ -20,25 +20,28 @@
         <i class="message-icon icons fa-regular fa-message fa-3x"></i>
       <% end %>
       <%= link_to connection_tasks_path(@connection) do %>
-        <i class="timeline-icon icons fa-solid fa-timeline"></i>
+        <i class="timeline-icon icons fa-regular fa-calendar-days pb-2"></i>
       <% end %>
     <% end %>
   </div>
 
-  <br>
+  <%# <br> %>
 
-  <h3 class="mt-0 mb-4"> Previous Mentors</h3>
+  <div class="mt-5">
+    <h3 class="mt-0 mb-4"> Previous Mentors</h3>
 
-  <% @random_mentors.each do |mentor| %>
-    <div class="card-small-gray">
-      <%= link_to mentor_path(mentor) do %>
-        <%= image_tag mentor.user.avatar_url, class: "avatar-home" %>
-      <% end %>
-      <div class="card-small-infos">
-        <h4 class="gray-username"><%= mentor.user.first_name %></h4>
-        <i class="message-icon-gray icons fa-regular fa-message fa-3x"></i>
-        <i class="timeline-icon-gray icons fa-solid fa-timeline"></i>
+    <% @random_mentors.each do |mentor| %>
+      <div class="card-home">
+        <%= link_to mentor_path(mentor) do %>
+          <%= image_tag mentor.user.avatar_url, class: "avatar-home" %>
+        <% end %>
+        <div class="card-small-infos">
+          <h4 class="gray-username"><%= mentor.user.first_name %></h4>
+        </div>
+          <i class="message-icon-gray icons fa-regular fa-message fa-3x"></i>
+          <i class="timeline-icon-gray icons fa-regular fa-calendar-days pb-2"></i>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
 </div>
