@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  background-color: #f3f7f7; /* Adjusted to lowercase for consistency */
+  background-color: #f3f7f7;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   position: relative;
@@ -20,10 +20,10 @@
   margin-bottom: 20px;
 }
 
-.card-small-gray-task-doing-mentor {
-  /* Add styles for mentor view */
-  background-color: #f3f7f7;
-}
+// .card-small-gray-task-doing-mentor {
+//   /* Add styles for mentor view */
+//   background-color: #f3f7f7;
+// }
 
 .edit-task-button,
 .mark-as-done-button {
@@ -44,12 +44,12 @@
   text-align: center;
   background-color: #F3F7F7;
   border-radius: 10px #CCE0DE;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 black;
   position: relative;
   width: 100%;
   height: 100px;
   padding: 20px;
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px;
 }
 
 .card-small-gray-task-todo {
@@ -65,7 +65,7 @@
   width: 100%;
   height: 100px;
   padding: 20px;
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px;
 }
 
 .card-small-green-ultimate-goal {
@@ -73,9 +73,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; /* Updated to space around */
+  justify-content: space-around;
   text-align: center;
-  padding: 20px; /* Add padding as needed */
+  padding: 20px;
   color: white;
   text-emphasis-style: bold;
 }
