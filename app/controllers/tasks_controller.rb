@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
     @connection = Connection.find(params[:connection_id])
+    @tasks = @connection.tasks
     @mentee = @connection.mentee
   end
 
