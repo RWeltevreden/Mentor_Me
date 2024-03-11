@@ -27,20 +27,24 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+    @connection = @task.connection
   end
 
   def update
     @task = Task.find(params[:id])
     @task.update(task_params)
+    @connection = @task.connection
 
-    redirect_to task_path(@task)
+    redirect_to connection_tasks_path(@connection)
   end
 
   def mark_as_done
     @task = Task.find(params[:id])
-    @task.update(status: 'done')
+    @connection = @task.connection
+    @task.completed = true
+    @task.save
 
-    redirect_to tasks_path, notice: 'Task done.'
+    redirect_to connection_tasks_path(@connection), notice: 'Task done.'
   end
 
   def destroy
