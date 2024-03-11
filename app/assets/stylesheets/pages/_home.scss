@@ -10,8 +10,9 @@
 .card-small-gray {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: F3F7F7; /* Add the hash symbol before the color code */
+  justify-content: space-around;
+  text-align: center;
+  background-color: #F3F7F7; 
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   position: relative;

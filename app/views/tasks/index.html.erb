@@ -1,22 +1,65 @@
 <div class="container px-4 mt-4">
-    <h2>Tasks</h2>
-      <hr class="mt-0 mb-4">
+  <h2>Tasks</h2>
+  <hr class="mt-0 mb-4">
 
-    <ul>
+  <br>
+
+  <div class="card-small-gray-task-todo">
     <% @tasks.each do |task| %>
-      <li><%= link_to task.title, connection_task_path(@connection, task), class: "task" %></li>
-    <% end %>
-    </ul>
+      <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
+      <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
+      <i class="fa-solid fa-pencil"></i>
+      <% end %>
+       <% end %>
+    <%= link_to mark_as_done_task_path(@mentee), method: :put, class: 'mark-as-done-button' do %>
+        <i class="fa-regular fa-square-check"></i>
+     <% end %>
+  </div>
 
-    <div class="row">
-      <div class="col-12 d-flex justify-content-center ">
-        <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center"%>
-      </div>
-    </div>
- <br>
-<div class="goal text-center">
-    <h5>Main goal:</h5>
-    <h6><%= @mentee.goal %></h6>
+  <div class="card-small-gray-task-doing">
+  <% @tasks.each do |task| %>
+      <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
+      <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
+      <i class="fa-solid fa-pencil"></i>
+      <% end %>
+    <% end %>
+    <% if current_user.is_mentor? %>
+      <%= link_to mark_as_done_task_path(@mentee), method: :put, class: 'mark-as-done-button' do %>
+        <i class="fa-regular fa-square-check"></i>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="card-small-gray-task-done">
+  <% @tasks.each do |task| %>
+      <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
+      <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
+      <i class="fa-solid fa-pencil"></i>
+      <% end %>
+  <% end %>
+  <%= link_to mark_as_done_task_path(@mentee), method: :put, class: 'mark-as-done-button' do %>
+    <i class="fa-regular fa-square-check"></i>
+  <% end %>
 </div>
 
+
+  <div class="card-small card-small-green-ultimate-goal">
+    <h5>I am going to</h5>
+    <div class="card-small-infos">
+      <h3><%= @mentee.goal %></h3>
+    </div>
+      <%= link_to mark_as_done_task_path(@mentee), method: :put, class: 'mark-as-done-button' do %>
+        <i class="fa-regular fa-square-check"></i>
+     <% end %>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center ">
+      <% if current_user.is_mentor? %>
+        <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center" %>
+      <% end %>
+    </div>
+  </div>
 </div>

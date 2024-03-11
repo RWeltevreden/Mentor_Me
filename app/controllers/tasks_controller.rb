@@ -36,6 +36,13 @@ class TasksController < ApplicationController
     redirect_to task_path(@task)
   end
 
+  def mark_as_done
+    @task = Task.find(params[:id])
+    @task.update(status: 'done')
+
+    redirect_to tasks_path, notice: 'Task done.'
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
