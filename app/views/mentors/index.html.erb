@@ -1,6 +1,6 @@
 
 <div class="swiper mySwiper">
-  <div class="swiper-pagination"></div>
+  <div class="swiper-pagination" data-controller='swiper'></div>
   <div class="swiper-wrapper">
     <% @mentors.each do |mentor| %>
       <div class="swiper-slide">
@@ -24,16 +24,16 @@
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<%# <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> %>
 
 <!-- Initialize Swiper -->
-<script>
+<%# <script>
   const swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
     },
   });
-</script>
+</script> %>
 
 
 <div class="buttons">
