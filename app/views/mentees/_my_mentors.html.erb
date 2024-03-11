@@ -30,15 +30,15 @@
   <h3 class="mt-0 mb-4"> Previous Mentors</h3>
 
   <% @random_mentors.each do |mentor| %>
-    <div class="card-small-gray">
+    <div class="card-home">
       <%= link_to mentor_path(mentor) do %>
         <%= image_tag mentor.user.avatar_url, class: "avatar-home" %>
       <% end %>
       <div class="card-small-infos">
         <h4 class="gray-username"><%= mentor.user.first_name %></h4>
+      </div>
         <i class="message-icon-gray icons fa-regular fa-message fa-3x"></i>
         <i class="timeline-icon-gray icons fa-solid fa-timeline"></i>
-      </div>
     </div>
   <% end %>
 </div>
