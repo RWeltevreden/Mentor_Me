@@ -1,39 +1,55 @@
 <div class="container px-4 mt-4">
-<h3 class="mt-0 mb-4">My Mentee</h3>
+  <h3 class="mt-0 mb-4">My Mentee</h3>
 
-<div class="card-small card-small-green">
-  <%= link_to "picture of user", "#" %>
-  <div class="card-small-infos">
-    <h2>user name</h2>
-    <p>💬 🏆</p>
-  </div>
-</div>
-
-<br>
-
-<h3 class="mt-0 mb-4"> Previous Mentees</h3>
-
-    <div class="card-small-gray">
-      <%= link_to "picture of user", "#"%>
-        <div class="card-small-infos">
-          <h2>user name</h2>
-          <p>💬   🏆</p>
-        </div>
+  <div class="card-small card-small-green">
+    <% if @connection %>
+      <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
+    <% end %>
+    <div class="card-small-infos">
+      <% if @connection %>
+        <h4><%= @connection.mentee.user.first_name %></h4>
+      <% else %>
+        <h4><%= link_to 'choose your mentee', mentees_path %></h4>
+      <% end %>
     </div>
+    <% if @connection %>
+      <%= link_to chatroom_path(Chatroom.last) do %>
+        <i class="message-icon fa-regular fa-message fa-2x"></i>
+      <% end %>
+      <%= link_to connection_tasks_path(@connection) do %>
+        <i class="timeline-icon fa-solid fa-timeline"></i>
+      <% end %>
+    <% end %>
+  </div>
+
+  <br>
+
+  <h3 class="mt-0 mb-4"> Previous Mentees</h3>
 
   <div class="card-small-gray">
-      <%= link_to "picture of user", "#"%>
-        <div class="card-small-infos">
-          <h2>user name</h2>
-          <p>💬   🏆</p>
-        </div>
+    <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
+    <div class="card-small-infos">
+      <h4 class="gray-username">user name</h4>
+      <i class="message-icon-gray fa-regular fa-message fa-2x"></i>
+      <i class="timeline-icon-gray fa-solid fa-timeline"></i>
     </div>
+  </div>
 
-      <div class="card-small-gray">
-      <%= link_to "picture of user", "#"%>
-        <div class="card-small-infos">
-          <h2>user name</h2>
-          <p>💬   🏆</p>
-        </div>
+  <div class="card-small-gray">
+    <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
+    <div class="card-small-infos">
+      <h4 class="gray-username">user name</h4>
+      <i class="message-icon-gray fa-regular fa-message fa-2x"></i>
+      <i class="timeline-icon-gray fa-solid fa-timeline"></i>
     </div>
+  </div>
+
+  <div class="card-small-gray">
+    <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
+    <div class="card-small-infos">
+      <h4 class="gray-username">user name</h4>
+      <i class="message-icon-gray fa-regular fa-message fa-2x"></i>
+      <i class="timeline-icon-gray fa-solid fa-timeline"></i>
+    </div>
+  </div>
 </div>

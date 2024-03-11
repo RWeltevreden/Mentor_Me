@@ -1,6 +1,6 @@
 <div class="container px-4 mt-4">
-
   <h3 class="mt-0 mb-4">My Mentor</h3>
+
   <div class="card-small card-small-green">
     <% if @connection %>
       <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
@@ -14,7 +14,7 @@
     </div>
     <% if @connection %>
       <%= link_to chatroom_path(Chatroom.last) do %>
-        <i class="message-icon fa-regular fa-message fa-3x"></i>
+        <i class="message-icon fa-regular fa-message fa-2x"></i>
       <% end %>
       <%= link_to connection_tasks_path(@connection) do %>
         <i class="timeline-icon fa-solid fa-timeline"></i>
@@ -30,7 +30,7 @@
     <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
     <div class="card-small-infos">
       <h4 class="gray-username">user name</h4>
-      <i class="message-icon-gray fa-regular fa-message fa-3x"></i>
+      <i class="message-icon-gray fa-regular fa-message fa-2x"></i>
       <i class="timeline-icon-gray fa-solid fa-timeline"></i>
     </div>
   </div>
@@ -39,7 +39,7 @@
     <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
     <div class="card-small-infos">
       <h4 class="gray-username">user name</h4>
-      <i class="message-icon-gray fa-regular fa-message fa-3x"></i>
+      <i class="message-icon-gray fa-regular fa-message fa-2x"></i>
       <i class="timeline-icon-gray fa-solid fa-timeline"></i>
     </div>
   </div>
@@ -48,7 +48,7 @@
     <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
     <div class="card-small-infos">
       <h4 class="gray-username">user name</h4>
-      <i class="message-icon-gray fa-regular fa-message fa-3x"></i>
+      <i class="message-icon-gray fa-regular fa-message fa-2x"></i>
       <i class="timeline-icon-gray fa-solid fa-timeline"></i>
     </div>
   </div>
