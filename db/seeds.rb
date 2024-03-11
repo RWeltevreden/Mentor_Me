@@ -16,35 +16,39 @@ Mentee.destroy_all
 User.destroy_all
 
 # Create a user
-user1 = User.create!({ email: "romeeweltevreden@hotmail.com",
-        first_name: "Romee", last_name: "Weltevreden", location: "Amsterdam", password: "test123" })
+user1 = User.create!({ email: "maiia@hotmail.com",
+        first_name: "Maiia", last_name: "Kuzmina", avatar_url: "https://avatars.githubusercontent.com/u/142728740?v=4", location: "Amsterdam", bio: "Experienced freelance software developer with expertise in [programming languages/technologies]. From creating seamless user interfaces to building robust backend systems, I specialize in crafting efficient and scalable solutions. A problem solver at heart, I thrive on turning diverse concepts into high-quality code. Let's collaborate and bring your digital ideas to life!", password: "test123" })
 
-user2 = User.create!(email: "test@hotmail.com",
-        first_name: "Name", last_name: "Last_Name", location: "Zaandam", password: "test321")
+user2 = User.create!(email: "dogus@hotmail.com",
+        first_name: "Dogus", last_name: "Akyuz", avatar_url:"https://avatars.githubusercontent.com/u/156441198?v=4", location: "Zaandam", bio: "Dedicated software engineer at Shopify, specializing in [specific areas, e.g., backend development, front-end design]. Proven track record of crafting scalable and efficient solutions, ensuring a seamless shopping experience. Passionate about innovation and committed to maintaining Shopify's cutting-edge technology. Let's elevate your e-commerce platform together!", password: "test321")
+        
 
-user3 = User.create!(email: "annakarsten@hotmail.com",
-        first_name: "Anna", last_name: "Karsten", location: "Haarlem", password: "TEST123")
+user3 = User.create!(email: "david@hotmail.com",
+        first_name: "David", last_name: "Ponte", avatar_url:"https://avatars.githubusercontent.com/u/76748144?v=4", location: "Haarlem", bio: "Versatile Fullstack Developer proficient in both front-end and back-end technologies. With a passion for crafting seamless user experiences and scalable systems, I excel in creating dynamic web applications. Adept at problem-solving and committed to delivering high-quality solutions. Let's build something extraordinary together in the digital realm!", password: "TEST123")
 
-user4 = User.create!(email: "test1@hotmail.com",
-        first_name: "Test", last_name: "TEST", location: "Amsterdam", bio: "I'm a Front-End Developer at Google. Specializing in HTML, CSS, and JavaScript, I'm dedicated to elevating user interfaces and optimizing customer interactions. Committed to delivering cutting-edge design and functionality that enhances the Googlr experience. Let's innovate together in the world of e-commerce! 💻🌐✨", password: "TEST123")
+user4 = User.create!(email: "Jackie@hotmail.com",
+        first_name: "Jackie", last_name: "Almeida Dos Santos", avatar_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1705605455/pe84bfifi0gqhzxiicij.jpg",location: "Amsterdam", bio: "I'm a Front-End Developer at Google. Specializing in HTML, CSS, and JavaScript, I'm dedicated to elevating user interfaces and optimizing customer interactions. Committed to delivering cutting-edge design and functionality that enhances the Googlr experience. Let's innovate together in the world of e-commerce! 💻🌐✨", password: "TEST123") #(MENTOR IN THE SWIPE)
 
-user5 = User.create!(email: "testing@hotmail.com",
-        first_name: "Test", last_name: "Ing", location: "Amstelveen", bio: "Hey, I'm a Back-End Developer passionate about constructing robust server-side solutions. Proficient in languages like Python, Java, and frameworks like Django. From databases to APIs, I thrive on optimizing functionality behind the scenes. Let's bring efficiency to the digital realm, one line of code at a time! 🚀✨", password: "TEST001")
+user5 = User.create!(email: "Janis@hotmail.com",
+        first_name: "Janis", last_name: "Jekabs Ivdris", avatar_url: "https://avatars.githubusercontent.com/u/82565025?v=4", location: "Amstelveen", bio: "Hey, I'm a Back-End Developer passionate about constructing robust server-side solutions. Proficient in languages like Python, Java, and frameworks like Django. From databases to APIs, I thrive on optimizing functionality behind the scenes. Let's bring efficiency to the digital realm, one line of code at a time! 🚀✨", password: "TEST001") #(MENTOR IN THE SWIPE)
 
-user6 = User.create!(email: "fake@hotmail.com",
-        first_name: "Fake", last_name: "Name", location: "Ouderkerk aan de Amstel", bio: "Greetings! I'm a dedicated product enthusiast committed to translating ideas into impactful solutions. With a passion for user-centric design and agile methodologies, I navigate the intersection of business goals and customer needs. Let's create products that resonate and drive meaningful change! 🌐✨", password: "TEST123")
+
+user6 = User.create!(email: "annak@hotmail.com",
+        first_name: "Anna", last_name: "Karsten", avatar_url:"https://avatars.githubusercontent.com/u/156093237?v=4", location: "Ouderkerk aan de Amstel", bio: "Greetings! I'm a dedicated product enthusiast committed to translating ideas into impactful solutions. With a passion for user-centric design and agile methodologies, I navigate the intersection of business goals and customer needs. Let's create products that resonate and drive meaningful change! 🌐✨", password: "TEST123") #(MENTOR IN THE SWIPE)
+
 
 user7 = User.create!(email: "romeew@hotmail.com",
-        first_name: "Romee", last_name: "Weltevreden", location: "Amsterdam", bio: "Enthusiastic Fullstack Developer with a passion for building seamless web applications. Proficient in HTML, CSS, JavaScript, Node.js, and SQL/NoSQL databases. Committed to continuous learning, I thrive on solving complex problems and contributing to the developer community. Let's craft innovative solutions and shape the future of technology together! 💻✨", password: "TEST123") #(DEMO DAY mentor)
+        first_name: "Romee", last_name: "Weltevreden", avatar_url: "https://avatars.githubusercontent.com/u/156311823?v=4", location: "Amsterdam", bio: "Enthusiastic Fullstack Developer with a passion for building seamless web applications. Proficient in HTML, CSS, JavaScript, Node.js, and SQL/NoSQL databases. Committed to continuous learning, I thrive on solving complex problems and contributing to the developer community. Let's craft innovative solutions and shape the future of technology together! 💻✨", password: "TEST123") #(DEMO DAY mentor!! WILL BE THE SET UP CONNECION WITH MENTEE)
+
 
 user8 = User.create!(email: "annap@hotmail.com",
-        first_name: "Anna", last_name: "Putt", location: "Amsterdam", bio:"Hello, I'm [Developer's Name], an aspiring developer embarking on a journey into the captivating world of coding. Armed with a zeal for learning, I'm diving into HTML, CSS, and JavaScript, eager to build my foundation. Excited to grow, collaborate, and turn imaginative ideas into tangible digital experiences.", password: "TEST123") #(DEMO DAY menteeeeeee)
+        first_name: "Anna", last_name: "Putt", avatar_url: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1657695963/tbsvduadlibit1544ebi.jpg", location: "Amsterdam", bio:"Hello, I'm an aspiring developer embarking on a journey into the captivating world of coding. Armed with a zeal for learning, I'm diving into HTML, CSS, and JavaScript, eager to build my foundation. Excited to grow, collaborate, and turn imaginative ideas into tangible digital experiences.", password: "TEST123") #(DEMO DAY menteeeeeee (LOG IN WITH THIS ACCOUNT))
 
 
 
 # Create a mentor
-mentor1 = Mentor.create!(job_title: "Software Developer", company: "le wagon", rating: 3, user: user1)
-mentor2 = Mentor.create!(job_title: "Software Engineer", company: "le wagon", rating: 4, user: user2)
+mentor1 = Mentor.create!(job_title: "Software Developer", company: "Freelancer", rating: 3, user: user1)
+mentor2 = Mentor.create!(job_title: "Software Engineer", company: "Shopify", rating: 4, user: user2)
 mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon", rating: 4, user: user3)
 mentor4 = Mentor.create!(job_title: "Front-End Developer", company: "Google", rating: 3, user: user4)
 mentor5 = Mentor.create!(job_title: "Back-End Developer", company: "Amazon",  rating: 4, user: user5)
