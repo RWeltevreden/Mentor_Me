@@ -1,23 +1,25 @@
 <div class="container px-4 mt-4">
-
+<br>
   <h3 class="mt-0 mb-4">My Mentor</h3>
   <div class="card-small card-small-green">
     <% if @connection %>
-      <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
+      <%= link_to connection_path(@connection) do %>
+        <%= image_tag @connection.mentor.user.avatar_url, class: "avatar-home" %>
+      <% end %>
     <% end %>
     <div class="card-small-infos">
       <% if @connection %>
-        <h4><%= @connection.mentor.user.first_name %></h4>
+        <h4 class="user-home"><%= @connection.mentor.user.first_name %></h4>
       <% else %>
         <h4><%= link_to 'choose your mentor', mentors_path %></h4>
       <% end %>
     </div>
     <% if @connection %>
       <%= link_to chatroom_path(Chatroom.last) do %>
-        <i class="message-icon fa-regular fa-message fa-3x"></i>
+        <i class="message-icon icons fa-regular fa-message fa-3x"></i>
       <% end %>
       <%= link_to connection_tasks_path(@connection) do %>
-        <i class="timeline-icon fa-solid fa-timeline"></i>
+        <i class="timeline-icon icons fa-solid fa-timeline"></i>
       <% end %>
     <% end %>
   </div>
@@ -26,30 +28,16 @@
 
   <h3 class="mt-0 mb-4"> Previous Mentors</h3>
 
-  <div class="card-small-gray">
-    <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
-    <div class="card-small-infos">
-      <h4 class="gray-username">user name</h4>
-      <i class="message-icon-gray fa-regular fa-message fa-3x"></i>
-      <i class="timeline-icon-gray fa-solid fa-timeline"></i>
+  <% @random_mentors.each do |mentor| %>
+    <div class="card-small-gray">
+      <%= link_to mentor_path(mentor) do %>
+        <%= image_tag mentor.user.avatar_url, class: "avatar-home" %>
+      <% end %>
+      <div class="card-small-infos">
+        <h4 class="gray-username"><%= mentor.user.first_name %></h4>
+        <i class="message-icon-gray icons fa-regular fa-message fa-3x"></i>
+        <i class="timeline-icon-gray icons fa-solid fa-timeline"></i>
+      </div>
     </div>
-  </div>
-
-  <div class="card-small-gray">
-    <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
-    <div class="card-small-infos">
-      <h4 class="gray-username">user name</h4>
-      <i class="message-icon-gray fa-regular fa-message fa-3x"></i>
-      <i class="timeline-icon-gray fa-solid fa-timeline"></i>
-    </div>
-  </div>
-
-  <div class="card-small-gray">
-    <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
-    <div class="card-small-infos">
-      <h4 class="gray-username">user name</h4>
-      <i class="message-icon-gray fa-regular fa-message fa-3x"></i>
-      <i class="timeline-icon-gray fa-solid fa-timeline"></i>
-    </div>
-  </div>
+  <% end %>
 </div>

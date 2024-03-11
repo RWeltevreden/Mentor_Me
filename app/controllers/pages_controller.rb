@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     @current_user_role = current_user.role
     if @current_user_role == "mentee"
      @connection = current_user.mentee.connection
+     @random_mentors = Mentor.all.sample(3)
     else
       @connection = current_user.mentor.connection
     end
