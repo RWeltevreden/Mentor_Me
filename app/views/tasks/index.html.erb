@@ -3,16 +3,15 @@
   <hr class="mt-0 mb-4">
   <br>
 
-      <%# ULTIMATE GOAL %>
+  <div style="text-align: center;">
   <h3>I am going to: </h3>
+  </div>
   <div class="card-small card-small-green-ultimate-goal">
     <div class="card-small-infos">
       <h3><%= @mentee.goal %></h3>
     </div>
   </div>
   <br>
-
-
 
   <% @tasks.each do |task| %>
     <% if task.completed %>
@@ -33,6 +32,7 @@
       </div>
     <% end %>
 
+      <%# Make the card and/or the trophy icon a different color? %>
   <div class="card-small card-small-green-ultimate-goal">
     <div class="card-small-infos">
       <h3>I did it!</h3>
