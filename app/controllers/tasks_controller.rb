@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
     @connection = Connection.find(params[:connection_id])
-    @tasks = @connection.tasks
+    @tasks = @connection.tasks.order(:end_date)
     @mentee = @connection.mentee
   end
 
