@@ -4,3 +4,14 @@
   display: flex;
   justify-content: center;
 }
+
+#import-input::placeholder {
+  color: $medium;
+  font-weight: bolder;
+  // opacity: 1;
+}
+
+.swipe-input::placeholder {
+  color: $medium;
+
+}
