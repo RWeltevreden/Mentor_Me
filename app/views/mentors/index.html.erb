@@ -5,21 +5,18 @@
     <% @mentors.each do |mentor| %>
       <div class="swiper-slide">
 
-        <p>Profile picture</p>
-        <p><%= mentor.user.first_name %></p>
-        <p><%= mentor.job_title %></p>
-        <p><%= mentor.user.location %></p>
+        <p>Placeholder avatar</p>
+        <p><%= mentor.user.avatar_url %></p>
+      <form class="bio">
+        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.user.first_name%> <%= value=mentor.user.last_name%>" disabled>
+        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.job_title %>" disabled>
+        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.company %>" disabled>
+        <textarea class="form-control input_html text-center" id="inputCompany" placeholder="<%= mentor.user.bio %>" disabled rows="8" cols="50"></textarea>
+        <input class="form-control input_html text-center" id="inputCompany" type="text" placeholder="<%= value=mentor.user.location %>" disabled>
+        </form>
 
 
-        <div class="buttons" style="display: flex; justify-content: space-between; align-items: center;" >
-        <button class="btn btn-flat btn-reject">Reject</button>
-        <%= simple_form_for (@connection) do |f| %>
-        <%= f.input :mentor_id, as: :hidden, input_html: { value: mentor.id} %>
-         <%= f.input :mentee_id, as: :hidden, input_html: { value: current_user.mentee.id} %>
-        <%= f.input :status, as: :hidden, input_html: { value: true} %>
-        <%= f.button :submit, "Accept", class:"btn btn-flat btn-accept" %>
-        <% end %>
-        </div>
+
 
       </div>
     <% end %>
@@ -39,7 +36,7 @@
 </script>
 
 
-<%# <div class="buttons">
+<div class="buttons">
   <button class="btn btn-flat btn-reject">Reject</button>
   <button type="submit"  class="btn btn-flat btn-accept">Accept</button>
-</div> %>
+</div>

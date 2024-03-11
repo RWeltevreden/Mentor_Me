@@ -9,7 +9,6 @@
 }
 .card-small-gray {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   text-align: center;
@@ -50,4 +49,16 @@ h4 {
   font-family: 'Source Sans Pro', sans-serif;
   color: #548C85;
   font-weight: bold;
+  font-size: 18px;
+}
+
+.user-home {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #F3F7F7;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.icons{
+  font-size: 30px;
 }
