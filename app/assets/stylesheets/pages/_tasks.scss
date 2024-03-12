@@ -66,3 +66,21 @@
   color: #548C85;
   background-color: transparent;
 }
+
+.btn-task-delete{
+  background-color: white;
+  border-radius: 50px;
+  border-color: #548C85;
+  color: #548C85;
+  padding: 10px 10px;
+  font-size: 16px;
+  transition:0.3s ease;
+  height: 40px;
+  width: 275px;
+}
+
+
+.btn-task-delete:hover{
+  background: #548C85;
+  color: $lighter;
+}
