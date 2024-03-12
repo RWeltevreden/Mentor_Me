@@ -14,18 +14,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
 
-  <body>
+  <body class="content">
+    <div class="content-top">
       <%= render 'shared/navbar' if current_user %>
-    <div class="content">
-      <div>
-        <%# <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> %>
-        <%= yield %>
-      </div>
-
-      <%= render 'shared/footer' if current_user %>
-
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <%# <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> %>
+      <%= yield %>
     </div>
+
+    <%= render 'shared/footer' if current_user %>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   </body>
 </html>
