@@ -9,42 +9,36 @@
                     <!-- Profile picture upload button-->
           <button class="btn-ghost btn-submit btn-pp justify-content-center" type="button">Upload new image</button>
       </div>
-<br>
+  <br>
 
             <!-- Account details card-->
-                    <form>
-                        <!-- Form first name (username)-->
-                        <div class="mb-3">
-                          <p>First name</p>
-                          <input class="form-control input_html text-center" id="inputFirstName" type="text" placeholder="<%= current_user.first_name %>" disabled>
-                        </div>
-                        <!-- Form last-name-->
-                        <div class="mb-3">
-                          <p>Last name</p>
-                          <input class="form-control input_html text-center" id="inputLastName" type="text" placeholder="<%= current_user.last_name %>" disabled>
-                        </div>
-                        <!-- Form email-->
-                        <div class="mb-3">
-                          <p>Email</p>
-                          <input class="form-control input_html text-center" id="inputEmail" type="text" placeholder="<%= current_user.email %>" disabled>
-                        </div>
-                        <!-- Form company-->
-                        <div class="mb-3">
-                          <p>Goal</p>
-                          <input class="form-control input_html text-center" id="inputGoal" type="text" placeholder="<%= value=current_user.mentee.goal %>">
-                        </div>
-                        <!-- Form location-->
-                        <div class="mb-3">
-                          <p>Location</p>
-                          <input class="form-control input_html text-center" id="inputLocation" type="text" placeholder="Enter your location" value="Amsterdam">
-                        </div>
-                        <!-- Form bio-->
-                        <div class="mb-3">
-                          <p>Bio</p>
-                          <input class="form-control input_html text-center" id="inputBio" type="text" placeholder="write bio" value="11 years experience as wedeveloper">
-                        </div>
-                        <div class="form-actions">
-                         <button class= "btn-ghost btn-submit justify-content-center mb-3" type="button">Save changes</button>
-                      </div>
-                    </form>
+  <%= simple_form_for(@mentee) do |f| %>
+    <div class="mb-3">
+      <p>First name</p>
+      <input class="form-control input_html text-center" id="inputFirstName" type="text" placeholder="<%= current_user.first_name %>" disabled>
+    </div>
+    <!-- Form last-name-->
+    <div class="mb-3">
+      <p>Last name</p>
+      <input class="form-control input_html text-center" id="inputLastName" type="text" placeholder="<%= current_user.last_name %>" disabled>
+    </div>
+    <!-- Form email-->
+    <div class="mb-3">
+      <p>Email</p>
+      <input class="form-control input_html text-center" id="inputEmail" type="text" placeholder="<%= current_user.email %>" disabled>
+    </div>
+    <div class="mb-3">
+      <p>Location</p>
+      <input class="form-control input_html text-center" id="inputEmail" type="text" placeholder="<%= current_user.location %>" disabled>
+    </div>
+    <div class="mb-3">
+      <p>Bio</p>
+      <textarea class="form-control input_html text-center" id="inputbio" type="text" placeholder="<%= current_user.bio %>" disabled></textarea>
+    </div>
+    <%= f.input :goal,
+            required: false,
+            placeholder: @mentee.goal,
+            input_html: { autocomplete: "goal", class:"input_html text-center form-control" } %>
+    <%= f.submit class: "btn-ghost btn-submit justify-content-center mb-3" %>
+  <% end %>
   </div>

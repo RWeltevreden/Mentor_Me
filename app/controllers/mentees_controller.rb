@@ -16,6 +16,15 @@ class MenteesController < ApplicationController
     @connection
   end
 
+
+  def update
+    @mentee = Mentee.find(params[:id])
+    @mentee.update(mentee_params)
+      # No need for app/views/restaurants/update.html.erb
+    redirect_to dashboard_path
+  end
+
+
   private
 
   def mentee_params

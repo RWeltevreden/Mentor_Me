@@ -11,10 +11,19 @@ Rails.application.routes.draw do
   get 'onboarding', to: 'pages#onboarding'
   get '/dashboard', to: 'pages#dashboard'
   post '/connections', to: 'connections#create', as: 'connections'
+  get '/certificate', to: 'pages#certificate'
 
+
+
+  resources :mentees, only: [:new, :create, :show, :update]
+  resources :mentors, only: [:new, :create, :show, :index]
 
   resources :mentees, only: [:new, :create, :show]
-  resources :mentors, only: [:new, :create, :show, :index]
+  resources :mentors, only: [:new, :create, :show, :index] do
+    resources :reviews, only: [:new, :create, :index]
+  end
+
+  resources :reviews, only: [:show]
 
   resources :connections, only: [:show] do
     resources :tasks, only: [:index, :new, :create,:show, :destroy,:update]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_11_095807) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_12_100240) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_095807) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "reviews"
     t.index ["user_id"], name: "index_mentors_on_user_id"
   end
 
@@ -66,6 +67,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_095807) do
     t.datetime "updated_at", null: false
     t.index ["mentee_id"], name: "index_rejecteds_on_mentee_id"
     t.index ["mentor_id"], name: "index_rejecteds_on_mentor_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "mentor_id"
+    t.text "content"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -105,5 +113,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_095807) do
   add_foreign_key "messages", "users"
   add_foreign_key "rejecteds", "mentees"
   add_foreign_key "rejecteds", "mentors"
+  add_foreign_key "reviews", "mentors"
   add_foreign_key "tasks", "connections"
 end

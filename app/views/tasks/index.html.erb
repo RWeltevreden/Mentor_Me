@@ -1,64 +1,64 @@
-<div class="container px-4 mt-4">
-  <h2>Tasks</h2>
-  <hr class="mt-0 mb-4">
+<div class="container px-4 mt-2">
+  <div class="container px-4 mb-2">
   <br>
 
-  <div style="text-align: center;">
-  <h3>I am going to: </h3>
-  </div>
-  <div class="card-small card-small-green-ultimate-goal">
-    <div class="card-small-infos">
-      <h3><%= @mentee.goal %></h3>
-    </div>
-  </div>
-  <br>
-
-    <%# Add a task %>
-    <div class="row">
-      <div class="col-12 d-flex justify-content-center ">
-          <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center" %>
+      <div style="text-align: center;">
+      <h2>I am going to: </h2>
       </div>
-    </div>
-<br>
-<% @tasks.each do |task| %>
-  <% if task.completed %>
-    <div class="card-small-gray-task-done">
-  <% else %>
-    <div class="card-small-gray-task-todo">
-  <% end %>
-    <div class="d-flex flex-column" style="width: 180px;">
-      <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
-      <i style="font-size: 0.9em;"><%= task.end_date.strftime("%d-%m-%Y") %></i>
-    </div>
-    <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
-    <svg class="task-icons" width="34" height="34" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
-    <% end %>
-    <%= link_to mark_as_done_task_path(task), data: { turbo_method: :put }, class: 'mark-as-done-button' do %>
-    <svg xmlns="http://www.w3.org/2000/svg" class="task-icons" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      <%# <--- make button disappear/ disabled when task is done----> %>
-    <% end %>
-  </div>
-<% end %>
-
-  <%# I DID IT BUTTON %>
-
-  <% if @tasks.any? { |task| !task.completed } %>
-    <div class="card-small card-small-green-ultimate-goal" style="display: none;">
-      <div class="card-small-infos">
-          <h1>I did it!</h1>
-      </div>
-    </div>
-  <% else %>
-    <%= link_to mentors_path, class: "text-decoration-none" do %>
       <div class="card-small card-small-green-ultimate-goal">
         <div class="card-small-infos">
-            <h1>I did it!</h1>
+          <h2 class="task-goal"><%= @mentee.goal %></h2>
         </div>
       </div>
-    <% end %>
-  <% end %>
-
-    <br>
-  </div>
       <br>
+
+        <%# Add a task %>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center ">
+              <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center btn-tasks" %>
+          </div>
+        </div>
+    <br>
+    <% @tasks.each do |task| %>
+      <% if task.completed %>
+        <div class="card-small-gray-task-done">
+      <% else %>
+        <div class="card-small-gray-task-todo">
+      <% end %>
+        <div class="d-flex flex-column" style="width: 180px;">
+          <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
+          <i style="font-size: 0.9em;"><%= task.end_date.strftime("%d-%m-%Y") %></i>
+        </div>
+        <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
+        <svg class="task-icons" width="34" height="34" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+        <% end %>
+        <%= link_to mark_as_done_task_path(task), data: { turbo_method: :put }, class: 'mark-as-done-button' do %>
+        <svg xmlns="http://www.w3.org/2000/svg" class="task-icons" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <%# <--- make button disappear/ disabled when task is done----> %>
+        <% end %>
+      </div>
+    <% end %>
+
+      <%# I DID IT BUTTON %>
+
+      <% if @tasks.any? { |task| !task.completed } %>
+        <div class="card-small card-small-green-ultimate-goal" style="display: none;">
+          <div class="card-small-infos text-center align-items-center">
+              <h3>I did it!</h3>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to certificate_path, class: "text-decoration-none" do %>
+          <div class="card-small card-small-green-ultimate-goal done-goal">
+            <div class="card-small-infos mt-1">
+                <h5 class="m-0 pb-0">Reached ultimate goal!🎉</h5>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+        <br>
+      </div>
+          <br>
+  </div>
 </div>
