@@ -23,8 +23,9 @@
 
          <%= image_tag mentor.user.avatar_url, class:"avatar-swipe " %>
 
-         <div id="popup-link" class="btn btn-primary" data-action="click->reviews#show" data-mentor-id="<%= mentor.id %>">
-          <i class="fas fa-star"></i> View Reviews
+         <div id="popup-link"  data-action="click->reviews#show" data-mentor-id="<%= mentor.id %>">
+          <i id=star-review class="fas fa-star"></i>
+          <p id=star-review>View Reviews</p>
         </div>
 
 
