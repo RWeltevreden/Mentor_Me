@@ -13,45 +13,52 @@
   </div>
   <br>
 
-  <% @tasks.each do |task| %>
-    <% if task.completed %>
-      <div class="card-small-gray-task-done">
-      <% else %>
-        <div class="card-small-gray-task-todo">
-        <% end %>
-        <div class="d-flex flex-column" style="width: 180px;">
-        <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
-        <i style="font-size: 0.9em;"><%= task.end_date.strftime("%d-%m-%Y") %></i>
-        </div>
-        <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
-          <i class="fa-solid fa-pencil"></i>
-        <% end %>
-        <%= link_to mark_as_done_task_path(task), data: {turbo_method: :put}, class: 'mark-as-done-button' do %>
-          <i class="fa-regular fa-square-check"></i>
-          <%# <--- make button disappear/ disabled when task is done----> %>
-        <% end %>
-      </div>
-    <% end %>
-
-
-      <%# Make the card and/or the trophy icon a different color? %>
-  <div class="card-small card-small-green-ultimate-goal">
-    <div class="card-small-infos">
-      <h3>I did it!</h3>
-      <%# add link to achievement page? %>
-
-      <%= link_to mark_as_done_task_path(@mentee), method: :put, class: 'mark-as-done-button' do %>
-      <i class="fa-solid fa-trophy"></i>
-    <% end %>
-    </div>
-  </div>
-
-    <br>
+    <%# Add a task %>
     <div class="row">
       <div class="col-12 d-flex justify-content-center ">
-        <% if current_user.is_mentor? %>
           <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center" %>
-        <% end %>
       </div>
     </div>
+<br>
+<% @tasks.each do |task| %>
+  <% if task.completed %>
+    <div class="card-small-gray-task-done">
+  <% else %>
+    <div class="card-small-gray-task-todo">
+  <% end %>
+    <div class="d-flex flex-column" style="width: 180px;">
+      <%= link_to task.title, connection_task_path(@connection, task), class: "task" %>
+      <i style="font-size: 0.9em;"><%= task.end_date.strftime("%d-%m-%Y") %></i>
+    </div>
+    <%= link_to edit_task_path(task), class: 'edit-task-button' do %>
+      <i class="task-icons pencil-icon-gray fa-solid fa-pencil fa-3x"></i>
+    <% end %>
+    <%= link_to mark_as_done_task_path(task), data: { turbo_method: :put }, class: 'mark-as-done-button' do %>
+      <i class="task-icons check-icon-gray fa-regular fa-square-check fa-3x"></i>
+      <%# <--- make button disappear/ disabled when task is done----> %>
+    <% end %>
   </div>
+<% end %>
+
+  <%# I DID IT BUTTON %>
+
+  <% if @tasks.any? { |task| !task.completed } %>
+    <div class="card-small card-small-green-ultimate-goal">
+      <div class="card-small-infos">
+          <h1>I did it!</h1>
+      </div>
+    </div>
+  <% else %>
+    <%= link_to mentors_path, class: "text-decoration-none" do %>
+      <div class="card-small card-small-green-ultimate-goal">
+        <div class="card-small-infos">
+            <h1>I did it!</h1>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+    <br>
+  </div>
+      <br>
+</div>
