@@ -1,12 +1,30 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: white;
+  background: #F3F7F7;
+  padding: 10px;
+  color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar .navbar-brand img {
   width: 40px;
+  /* Maybe add more styles for the logo image if needed */
+}
+
+/* Add styling for links in the navbar */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Add styling for the login link */
+.navbar .login-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
 }
