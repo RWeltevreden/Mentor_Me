@@ -13,7 +13,13 @@
   </div>
   <br>
 
-
+    <%# Add a task %>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center ">
+          <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center" %>
+      </div>
+    </div>
+<br>
 <% @tasks.each do |task| %>
   <% if task.completed %>
     <div class="card-small-gray-task-done">
@@ -36,21 +42,23 @@
 
   <%# I DID IT BUTTON %>
 
-  <%= link_to "#", class: "text-decoration-none", disabled: @tasks.any? { |task| !task.completed } do %>
+  <% if @tasks.any? { |task| !task.completed } %>
     <div class="card-small card-small-green-ultimate-goal">
       <div class="card-small-infos">
           <h1>I did it!</h1>
       </div>
     </div>
+  <% else %>
+    <%= link_to mentors_path, class: "text-decoration-none" do %>
+      <div class="card-small card-small-green-ultimate-goal">
+        <div class="card-small-infos">
+            <h1>I did it!</h1>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 
-
     <br>
-    <div class="row">
-      <div class="col-12 d-flex justify-content-center ">
-          <%= link_to "Add a task", new_connection_task_path, class: "btn btn-ghost btn-submit align-items-center" %>
-      </div>
-    </div>
   </div>
       <br>
 </div>
