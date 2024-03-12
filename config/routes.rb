@@ -14,7 +14,11 @@ Rails.application.routes.draw do
 
 
   resources :mentees, only: [:new, :create, :show]
-  resources :mentors, only: [:new, :create, :show, :index]
+  resources :mentors, only: [:new, :create, :show, :index] do
+    resources :reviews, only: [:new, :create, :index]
+  end
+
+  resources :reviews, only: [:show]
 
   resources :connections, only: [:show] do
     resources :tasks, only: [:index, :new, :create,:show, :destroy,:update]

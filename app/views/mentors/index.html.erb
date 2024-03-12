@@ -1,14 +1,34 @@
 <br>
-<div class="container px-4 mt-4">
+<div class="container px-4 mt-4" data-controller='swiper reviews'>
+
+  <!-- The Modal -->
+  <% @mentors.each do |mentor| %>
+    <div id="myModal" class="modal-container" data-reviews-target="modal" data-mentor-id="<%= mentor.id %>">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" data-action="click->reviews#close" data-mentor-id="<%= mentor.id %>">&times;</span>
+          <%mentor.reviews.each do |review| %>
+            <p><%= review.content %></p>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
 
 
 <div class="swiper mySwiper">
-  <div class="swiper-pagination" data-controller='swiper'></div>
+  <div class="swiper-pagination"></div>
   <div class="swiper-wrapper">
     <% @mentors.each do |mentor| %>
       <div class="swiper-slide text-center">
 
          <%= image_tag mentor.user.avatar_url, class:"avatar-swipe " %>
+
+         <div id="popup-link" class="btn btn-primary" data-action="click->reviews#show" data-mentor-id="<%= mentor.id %>">
+          <i class="fas fa-star"></i> View Reviews
+        </div>
+
+
+
 
       <form class="bio mt-4">
         <input class="form-control input_html text-center swipe-input" id="import-input" type="text" placeholder="<%= value=mentor.user.first_name%> <%= value=mentor.user.last_name%>" disabled>

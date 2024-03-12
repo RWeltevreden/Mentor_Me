@@ -21,7 +21,7 @@ user1 = User.create!({ email: "maiia@hotmail.com",
 
 user2 = User.create!(email: "dogus@hotmail.com",
         first_name: "Dogus", last_name: "Akyuz", avatar_url:"https://avatars.githubusercontent.com/u/156441198?v=4", location: "Zaandam", bio: "Dedicated software engineer at Shopify, specializing in [specific areas, e.g., backend development, front-end design]. Proven track record of crafting scalable and efficient solutions, ensuring a seamless shopping experience. Passionate about innovation and committed to maintaining Shopify's cutting-edge technology. Let's elevate your e-commerce platform together!", password: "test321")
-        
+
 
 user3 = User.create!(email: "david@hotmail.com",
         first_name: "David", last_name: "Ponte", avatar_url:"https://avatars.githubusercontent.com/u/76748144?v=4", location: "Haarlem", bio: "Versatile Fullstack Developer proficient in both front-end and back-end technologies. With a passion for crafting seamless user experiences and scalable systems, I excel in creating dynamic web applications. Adept at problem-solving and committed to delivering high-quality solutions. Let's build something extraordinary together in the digital realm!", password: "TEST123")
@@ -48,7 +48,11 @@ user8 = User.create!(email: "annap@hotmail.com",
 
 # Create a mentor
 mentor1 = Mentor.create!(job_title: "Software Developer", company: "Freelancer", rating: 3, user: user1)
+review1 = Review.create!(content: "Great mentor, very helpful", mentor: mentor1)
+
 mentor2 = Mentor.create!(job_title: "Software Engineer", company: "Shopify", rating: 4, user: user2)
+review2 = Review.create!(content: "Received lots of coaching, great mentor", mentor: mentor2)
+
 mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon", rating: 4, user: user3)
 mentor4 = Mentor.create!(job_title: "Front-End Developer", company: "Google", rating: 3, user: user4)
 mentor5 = Mentor.create!(job_title: "Back-End Developer", company: "Amazon",  rating: 4, user: user5)
