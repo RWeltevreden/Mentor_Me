@@ -1,18 +1,18 @@
 .input_html {
-  border-radius: 50px;
+  border-radius: 30px;
   margin-bottom: 25px;
   display: flex;
   justify-content: center;
 }
 
 #import-input::placeholder {
-  color: $medium;
+  // color: $medium;
   font-weight: bolder;
   // opacity: 1;
 }
 
 .swipe-input::placeholder {
-  color: $medium;
+  // color: $medium;
 }
 
 #inputbio {

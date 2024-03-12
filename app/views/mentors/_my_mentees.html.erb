@@ -1,5 +1,5 @@
 <div class="container px-4 mt-4">
-  <h3 class="mt-0 mb-4">My Mentee</h3>
+  <h2 class="mt-0 mb-4">My Mentee</h2>
 
   <div class="card-small card-small-green">
     <% if @connection %>
@@ -24,7 +24,7 @@
 
   <br>
 
-  <h3 class="mt-0 mb-4"> Previous Mentees</h3>
+  <h2 class="mt-0 mb-4"> Previous Mentees</h2>
 
   <div class="card-small-gray">
     <%= link_to image_tag('https://via.placeholder.com/75', alt: 'User Avatar', style: 'border-radius: 20px;'), connection_path(@connection) if @connection %>
@@ -53,5 +53,3 @@
     </div>
   </div>
 </div>
-
-
