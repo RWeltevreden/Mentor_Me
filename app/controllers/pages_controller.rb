@@ -23,5 +23,7 @@ class PagesController < ApplicationController
   end
 
   def certificate
+    # @connection = current_user.mentor.connection
+    @connection = current_user.mentee.connection
   end
 end

@@ -5,4 +5,9 @@ class ReviewsController < ApplicationController
     @reviews = @mentor.reviews
   end
 
+  def new
+    # @mentor = Mentor.find_by(id: params[:mentor_id])
+    @review = Review.new
+  end
+
 end

@@ -10,10 +10,27 @@
 
     </div>
 
-    <div class="btn-achievement text-center">
+    <div class="btn-achievement text-center" data-controller="addreviews">
 
       <%= link_to "Share on socials", "#",  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3 mt-5"%>
-      <%= link_to "Review your mentor", "#",  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3"%>
+
+      <%= link_to "Review your mentor", "#", class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3", data: {action: 'click->addreviews#new'}%>
+
+       <div id="reviewmodal" class="modal-container" data-addreviews-target="reviewmodal">
+           <div class="modal-content">
+              <span class="new" data-action="click->addreviews#close">&times;</span>
+                <%= form_with url: '/certificate' do %>
+                  <div class="field">
+                    <label for="review">Your Review:</label>
+                    <textarea id="review" name="review"></textarea>
+                  </div>
+              <a href="/certificate">
+                <input type="button" value="Submit Review">
+              </a>
+            <% end %>
+        </div>
+       </div>
+
       <%= link_to "Choose a new mentor", mentors_path,  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3"%>
 
     </div>

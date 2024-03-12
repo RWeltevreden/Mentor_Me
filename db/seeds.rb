@@ -47,11 +47,12 @@ user8 = User.create!(email: "annap@hotmail.com",
 
 
 # Create a mentor
-mentor1 = Mentor.create!(job_title: "Software Developer", company: "Freelancer", rating: 3, user: user1)
-review1 = Review.create!(content: "Great mentor, very helpful", mentor: mentor1)
+mentor1 = Mentor.create!(job_title: "Software Developer", company: "Freelancer", user: user1)
+review1 = Review.create!(content: "Great mentor, very helpful", rating: 4, mentor: mentor1)
+review2 = Review.create!(content: "Achieved my goal within set timeline!", rating: 5, mentor: mentor1)
 
 mentor2 = Mentor.create!(job_title: "Software Engineer", company: "Shopify", rating: 4, user: user2)
-review2 = Review.create!(content: "Received lots of coaching, great mentor", mentor: mentor2)
+review2 = Review.create!(content: "Received lots of coaching, great mentor", rating: 3, mentor: mentor2)
 
 mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon", rating: 4, user: user3)
 mentor4 = Mentor.create!(job_title: "Front-End Developer", company: "Google", rating: 3, user: user4)
