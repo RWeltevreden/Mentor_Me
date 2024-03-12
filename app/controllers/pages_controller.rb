@@ -18,5 +18,10 @@ class PagesController < ApplicationController
 
   def dashboard
    @user = current_user
+   @mentee = current_user.mentee
+   @token = form_authenticity_token
+  end
+
+  def certificate
   end
 end

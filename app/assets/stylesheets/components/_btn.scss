@@ -22,6 +22,7 @@
   transition:0.3s ease;
   height: 40px;
   width: 275px;
+  border: #548C85;
 }
 
 .btn-submit:hover{
@@ -185,4 +186,24 @@
   button {
     border: none;
   }
+}
+
+.btn-achieved {
+  border: none;
+  width: 250px;
+  background-color: #CCE0DE;
+  color: #548C85;
+  text-decoration: none;
+}
+
+.btn-achieved:hover {
+  background: #548C85;
+  color: $lighter;
+}
+
+.btn-achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
