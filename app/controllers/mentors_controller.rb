@@ -3,6 +3,7 @@ class MentorsController < ApplicationController
   def index
     @mentors = Mentor.all
     @connection = Connection.new
+    @reviews = Review.all
   end
 
   def new
