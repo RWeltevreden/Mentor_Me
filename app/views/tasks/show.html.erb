@@ -5,7 +5,10 @@
   <p><strong>Description of task: </strong></p>
   <p><%= @task.description.capitalize %></p>
   <p><strong>Deadline of task:</strong></p>
-  <p><%= @task.end_date.strftime("%d-%m-%Y") %></p>
+    <p><i style="font-size: 0.9em;"><%= @task.end_date.strftime("%d-%m-%Y") %></i></p>
+
+
+
 
     <%= link_to "Edit", edit_task_path, class: "btn btn-submit btn-ghost d-flex align-items-center justify-content-center"%>
     <br>
