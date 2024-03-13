@@ -20,11 +20,32 @@
            <div class="modal-content">
               <span class="new" data-action="click->addreviews#close">&times;</span>
                 <%= form_with url: '/certificate' do %>
+                 <br>
+                  <br>
                   <div class="field">
-                    <label for="review">Your Review:</label>
+                    <label for="review">Leave your Review:</label>
                     <textarea id="review" name="review"></textarea>
                   </div>
+                  <br>
+                  <div >
+                    <span data-action="click->addreviews#fill" data-value=0
+                          class="star">★
+                    </span>
+                    <span data-action="click->addreviews#fill" data-value=1
+                          class="star">★
+                    </span>
+                    <span data-action="click->addreviews#fill" data-value=2
+                          class="star">★
+                    </span>
+                    <span data-action="click->addreviews#fill" data-value=3
+                          class="star">★
+                    </span>
+                    <span data-action="click->addreviews#fill" data-value=4
+                          class="star">★
+                    </span>
+                 </div>
               <a href="/certificate">
+              <br>
                 <input type="button" value="Submit Review">
               </a>
             <% end %>
@@ -34,6 +55,4 @@
       <%= link_to "Choose a new mentor", mentors_path,  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3"%>
 
     </div>
-
-
 </div>
