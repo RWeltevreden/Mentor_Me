@@ -20,7 +20,7 @@
   <%= simple_form_for [@chatroom, @message],
     html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" },
     class: "d-flex flex-column" } do |f| %>
-    <div class="input-with-button d-flex align-items-stretch" style="height: 60px;">
+    <div class="input-with-button chat d-flex align-items-stretch">
       <%= f.input :content, label: false, placeholder: "Placeholder text...",
         wrapper_html: { class: "flex-grow-1 message-input", style: "margin: 0 !important;" },
         input_html: {style: "border-radius: 50px 0 0 50px;"} %>
