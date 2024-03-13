@@ -53,6 +53,7 @@
   padding: 20px;
   color: white;
   text-emphasis-style: bold;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
 }
 
 .card-goal {
@@ -66,8 +67,10 @@
   color: white;
   text-emphasis-style: bold;
   border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+}
 
-  .btn-submit {
+.btn-submit {
     color: $lighter;
     padding: 10px 20px;
     font-size: 16px;
@@ -80,15 +83,21 @@
     color: #548C85;
     text-emphasis-style: bold;
   }
-  .btn-submit:hover{
+
+.btn-submit:hover{
     background: #CCE0DE;
     color: $lighter;
   }
-}
 
 .task-icons{
   font-size: 30px;
   color: #548C85;
+  background-color: transparent;
+}
+
+.reached-icons{
+  font-size: 30px;
+  color: white;
   background-color: transparent;
 }
 
@@ -102,7 +111,7 @@
   transition:0.3s ease;
   height: 40px;
   width: 275px;
-  text-align: justify;
+  text-align: center
 }
 
 
