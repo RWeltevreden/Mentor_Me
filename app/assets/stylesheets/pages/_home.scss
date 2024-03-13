@@ -43,13 +43,15 @@ h4 {
 .timeline-icon-gray {
   color: white;
   font-size: 3rem;
+  margin-right: -25px;
 }
 
 .gray-username {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #F3F7F7;
+  color:$medium;
   font-weight: bold;
   font-size: 18px;
+  margin-left: -35px;
 }
 
 .user-home {
@@ -57,6 +59,8 @@ h4 {
   color: #F3F7F7;
   font-weight: bold;
   font-size: 18px;
+  margin-left: -35px;
+  text-decoration: none;
 }
 
 .icons{
