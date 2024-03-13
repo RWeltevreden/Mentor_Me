@@ -8,6 +8,7 @@
       <div class="modal-content">
         <span class="close" data-action="click->reviews#close" data-mentor-id="<%= mentor.id %>">&times;</span>
           <%mentor.reviews.each do |review| %>
+          <span class="gold">
           <% (1..5).each do |i| %>
             <% if i <= review.rating %>
             <%=  raw '&#9733;' %> <!-- This is a filled star -->
@@ -15,12 +16,16 @@
              <%= raw '&#9734;' %> <!-- This is an empty star -->
             <% end %>
           <% end %>
+          </span>
             <p><%= review.content %></p>
-
+            <p class="user-review"><em>-Unknown USER</em></p>
+            <hr class="mt-0 mb-4">
           <% end %>
       </div>
     </div>
   <% end %>
+
+
 
 
 <div class="swiper mySwiper">
