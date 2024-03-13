@@ -42,6 +42,8 @@
 .star {
   display: inline;
   margin-right: 2px; /* adjust as needed */
+  color:gold;
+  font-size: 28px;
 }
 
 .gold {
@@ -55,4 +57,35 @@
 
 .user-review {
   font-size: 14px;
+}
+
+#review {
+  border-radius:10px;
+  height: 120px;
+}
+.submit-review {
+  border-radius: 50px;
+  background-color: #548C85;
+  color: #F3F7F7;
+  font-size: 16px;
+  height: 40px;
+  border: none;
+  width: 160px;
+  padding-bottom: -5px;
+}
+
+.star-rating {
+  color: gold;
+  font-size: 18px;
+}
+
+.new {
+  display: flex;
+  justify-content: left;
+  font-size: 22px;
+}
+
+.field{
+  margin-top: -25px;
+  margin-bottom: 10px;
 }
