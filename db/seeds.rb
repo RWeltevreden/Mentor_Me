@@ -50,12 +50,21 @@ user8 = User.create!(email: "annap@hotmail.com",
 mentor1 = Mentor.create!(job_title: "Software Developer", company: "Freelancer", user: user1)
 review1 = Review.create!(content: "Great mentor, very helpful", rating: 4, mentor: mentor1)
 review2 = Review.create!(content: "Achieved my goal within set timeline!", rating: 5, mentor: mentor1)
+review3 = Review.create!(content: "Very grateful for Maiia's coaching troughout my career change. With her help, I reached my goal of getting a traineeship as a Software Developer within 6 months", rating: 4, mentor: mentor1)
 
 mentor2 = Mentor.create!(job_title: "Software Engineer", company: "Shopify", rating: 4, user: user2)
-review2 = Review.create!(content: "Received lots of coaching, great mentor", rating: 3, mentor: mentor2)
+review1 = Review.create!(content: "Received lots of coaching, great mentor", rating: 3, mentor: mentor2)
+review2 = Review.create!(content: "Great coach!", rating: 4, mentor: mentor2)
 
 mentor3 = Mentor.create!(job_title: "Full-Stack Developer", company: "le wagon", rating: 4, user: user3)
+review1 = Review.create!(content: "David was very helpful in his coaching and guiding me through the tasks that need to be done", rating: 5, mentor: mentor3)
+review2 = Review.create!(content: "David definitely made my journey through a career change into IT a fun experience", rating: 3, mentor: mentor3)
+review3 = Review.create!(content: "Throughout our mentorship journey, David has played an instrumental role in shaping not just my professional skills, but also my outlook towards challenges and opportunities.", rating: 5, mentor: mentor3)
+
 mentor4 = Mentor.create!(job_title: "Front-End Developer", company: "Google", rating: 3, user: user4)
+review1 = Review.create!(content: "Grateful for Jackie's help, can really recommend her as a mentor", rating: 4, mentor: mentor4)
+review2 = Review.create!(content: "Jackie was always available on the chat whenever I needed help during my tasks, very happy with having done this journey with her", rating: 5, mentor: mentor4)
+
 mentor5 = Mentor.create!(job_title: "Back-End Developer", company: "Amazon",  rating: 4, user: user5)
 mentor6 = Mentor.create!(job_title: "Product Owner", company: "Tesla",  rating: 5, user: user6)
 mentor7 = Mentor.create!(job_title: "Full-Stack developer", company: "Uber", rating: 4, user: user7)

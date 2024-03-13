@@ -1,28 +1,63 @@
 <div class="container-xl px-4 mt-3">
   <div class="achievement-page text-center mb-5">
     <br>
-    
-    <strong>
-      <h2 class="congratulations" style="color: #548C85 !important; font-family: sans-serif !important; font-size: 50px !important;">Congratulations!</h2>
-    </strong>
+      <strong>
+        <h2 class="congratulations" style="color: #548C85 !important; font-family: sans-serif !important; font-size: 50px !important;">Congratulations!</h2>
+      </strong>
     <br>
     <%= image_tag "trophy.png", class: "trophy mt-5"%>
   </div>
-  <div class="btn-achievement text-center" data-controller="addreviews">
-    <%= link_to "Share on socials", "#",  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3 mt-5"%>
-    <%= link_to "Review your mentor", "#", class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3", data: {action: 'click->addreviews#new'}%>
-    <div id="reviewmodal" class="modal-container" data-addreviews-target="reviewmodal">
-      <div class="modal-content">
-        <span class="new" data-action="click->addreviews#close">&times;</span>
-        <%= form_with url: '/certificate' do %>
-          <div class="field">
-            <label for="review">Your Review:</label>
-            <textarea id="review" name="review"></textarea>
-          </div>
-          <a href="/certificate">
-            <input type="button" value="Submit Review">
-          </a>
-        <% end %>
+  <div class="btn-achievement text-center">
+    <div class="btn-achievement text-center" data-controller="socials">
+      <%= link_to "Share on socials", "#",  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3 mt-5", data: {action: 'click->socials#new'}%>
+      <div id="socialsmodal" class="modal-container" data-socials-target="socialsmodal">
+        <div class="modal-content">
+          <span class="new" data-action="click->socials#close">&times;</span>
+          <div class="icons-popup">
+          <i class="fa-brands social fa-linkedin"></i>
+          <i class="fa-brands social fa-square-instagram"></i>
+          <i class="fa-brands social fa-square-facebook"></i>
+          <i class="fa-brands social fa-square-twitter"></i>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-achievement text-center" data-controller="addreviews">
+      <%= link_to "Review your mentor", "#", class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3", data: {action: 'click->addreviews#new'}%>
+      <div id="reviewmodal" class="modal-container" data-addreviews-target="reviewmodal">
+        <div class="modal-content">
+          <span class="new" data-action="click->addreviews#close">&times;</span>
+          <%= form_with url: '/certificate' do %>
+            <br>
+            <br>
+            <div class="field">
+              <label for="review">Leave your Review:</label>
+              <textarea id="review" name="review"></textarea>
+            </div>
+            <br>
+            <div >
+              <span data-action="click->addreviews#fill" data-value=0
+                class="star">★
+              </span>
+              <span data-action="click->addreviews#fill" data-value=1
+                class="star">★
+              </span>
+              <span data-action="click->addreviews#fill" data-value=2
+                class="star">★
+              </span>
+              <span data-action="click->addreviews#fill" data-value=3
+                class="star">★
+              </span>
+              <span data-action="click->addreviews#fill" data-value=4
+                class="star">★
+              </span>
+            </div>
+            <a href="/certificate">
+              <br>
+              <input class="submit-review" type="button" value="Submit Review">
+            </a>
+          <% end %>
+        </div>
       </div>
     </div>
     <%= link_to "Choose a new mentor", mentors_path,  class:"btn-ghost btn-submit btn-achieved justify-content-center mb-3"%>
