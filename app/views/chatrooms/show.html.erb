@@ -1,19 +1,30 @@
-<div class="container-chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+<div class="container-chatroom mt-0"
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+  data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+  <%# NEED TO UPDATE CURENT USER.id %>
   <div class="messages" data-chatroom-subscription-target="messages">
+    <%# SHOW ALL MESSAGES %>
     <% @chatroom.messages.each do |message| %>
-    <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-      <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-        <%= render "messages/message", message: message %>
+      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+      <%# add id with message id %>
+
+        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+        <%# add id with message id %>
+          <%= render "messages/message", message: message %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
 
-  <%= simple_form_for [@chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex flex-column" } do |f| %>
+  <%= simple_form_for [@chatroom, @message],
+    html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" },
+    class: "d-flex flex-column" } do |f| %>
     <div class="input-with-button d-flex align-items-stretch" style="height: 60px;">
-      <%= f.input :content, label: false, placeholder: "Placeholder text...", wrapper_html: { class: "flex-grow-1 message-input", style: "margin: 0 !important;" }, input_html: {style: "border-radius: 50px 0 0 50px;"} %>
+      <%= f.input :content, label: false, placeholder: "Placeholder text...",
+        wrapper_html: { class: "flex-grow-1 message-input", style: "margin: 0 !important;" },
+        input_html: {style: "border-radius: 50px 0 0 50px;"} %>
       <%= f.submit "Send", class: "btn btn-message-send align-self-end", style: "border-radius: 0 50px 50px 0; height: 100%;" %>
     </div>
   <% end %>
-
 </div>

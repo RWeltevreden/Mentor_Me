@@ -1,7 +1,6 @@
 .container-chatroom {
   background: white;
-  margin-top: 9px;
-  // height: calc(100vh - 75px);
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -62,6 +61,7 @@
 
 .message-input, .btn-message-send {
   border-radius: 50px;
+  box-shadow: none;
 }
 
 .input-with-button {
