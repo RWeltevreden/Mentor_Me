@@ -1,6 +1,6 @@
 <div class="container px-4">
 <br>
-  <h2 class="mt-0 mb-4">My Mentor</h2>
+  <h4 class="mt-0 mb-4">My Mentor</h4>
 
   <div class="card-small card-small-green">
     <% if @connection %>
@@ -10,7 +10,9 @@
     <% end %>
     <div class="card-small-infos">
       <% if @connection %>
+      <%= link_to connection_path(@connection)do %>
         <h4 class="user-home"><%= @connection.mentor.user.first_name %></h4>
+        <%end%>
       <% else %>
         <h4><%= link_to 'choose your mentor', mentors_path %></h4>
       <% end %>
@@ -25,10 +27,10 @@
     <% end %>
   </div>
 
-  <%# <br> %>
+  <hr class="mt-5 mb-4">
 
   <div class="mt-5">
-    <h2 class="mt-0 mb-4"> Previous Mentors</h2>
+    <h4 class="mt-0 mb-4"> Previous Mentors</h4>
 
     <% @random_mentors.each do |mentor| %>
       <div class="card-home">
