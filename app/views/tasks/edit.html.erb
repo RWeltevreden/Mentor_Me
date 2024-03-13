@@ -19,11 +19,11 @@
     </div>
 
     <div class="form-actions d-flex justify-content-center">
-      <%= f.button :submit, "Save", name: 'commit_save', class: "btn btn-ghost btn-submit" %>
+      <%= f.button :submit, "Save", name: 'commit_save', class: "btn btn-ghost btn-submit", id:"btn-prim" %>
     </div>
   <% end %>
 
   <div class="text-center mt-3">
-    <%= link_to "Delete", connection_task_path(@connection, @task), data: { "turbo-method": :delete }, class: "btn btn-task-delete" %>
+    <%= link_to "Delete", connection_task_path(@connection, @task), data: { "turbo-method": :delete }, class: " btn btn-ghost btn-submit btn-secun" %>
   </div>
 </div>
