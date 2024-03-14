@@ -4,7 +4,9 @@
     <% photo = @mentee.user.avatar_url %>
 <% end %>
 
- <div class="col-xl-8 text-center">
+
+
+ <div class="col-xl-8 mt-2 text-center">
 
      <div class="card-header"></div>
       <div class="card-body text-center">
@@ -12,12 +14,13 @@
         <img class="avatar rounded-circle mb-2" src="<%= photo %>" alt="">
 
       </div>
+
 <br>
             <!-- Account details card-->
                     <form>
                         <!-- Form first name (username)-->
                         <div class="mb-3">
-                          <p>First name</p>
+                          <p>first name</p>
                           <input class="form-control input_html text-center" id="inputFirstName" type="text" placeholder="<%= @mentor.user.first_name %>" disabled>
                         </div>
                         <!-- Form last-name-->
