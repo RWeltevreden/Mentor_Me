@@ -1,11 +1,14 @@
 .card-small-green {
   background-color: #548C85;
+  color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content:space-between;
   text-align: center;
   padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
 }
 .card-small-gray {
   display: flex;
@@ -24,7 +27,7 @@
 
 h4 {
   font-family: 'Source Sans Pro', sans-serif;
-  color: black;
+  color: #454747;
   font-weight: bold;
 }
 
@@ -35,20 +38,26 @@ h4 {
 
 .message-icon,
 .timeline-icon {
+  color: #548C85;
+  font-size: 3rem;
+}
+
+.message-icon-mentor,
+.timeline-icon-mentor{
   color: white;
   font-size: 3rem;
 }
 
 .message-icon-gray,
 .timeline-icon-gray {
-  color: white;
+  color: #548C85;
   font-size: 3rem;
   margin-right: -25px;
 }
 
 .gray-username {
   font-family: 'Source Sans Pro', sans-serif;
-  color:$medium;
+  color:#548C85;
   font-weight: bold;
   font-size: 18px;
   margin-left: -35px;
@@ -56,7 +65,7 @@ h4 {
 
 .user-home {
   font-family: 'Source Sans Pro', sans-serif;
-  color: #F3F7F7;
+  color: white;
   font-weight: bold;
   font-size: 18px;
   margin-left: -35px;
