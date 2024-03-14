@@ -1,12 +1,11 @@
 <div class="container-xl px-4 mt-3">
-
   <div class="achievement-page text-center mb-5">
     <br>
       <strong>
         <h2 class="congratulations" style="color: #548C85 !important; font-family: sans-serif !important; font-size: 50px !important;">Congratulations!</h2>
       </strong>
     <br>
-    <%= image_tag "trophy.png", class: "trophy mt-5"%>
+    <%= image_tag "trophy.png", class: "trophy mt-5",  data: {controller: "confetti", action: "click->confetti#spray", confetti_animation_value:"school-pride", confetti_follow_value:"false", confetti_duration_value:"10"}%>
   </div>
   <div class="btn-achievement text-center">
     <div class="btn-achievement text-center" data-controller="socials">
