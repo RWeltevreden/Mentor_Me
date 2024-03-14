@@ -13,3 +13,5 @@ pin "ssr-window" # @4.0.2
 pin "swiper/bundle", to: "swiper--bundle.js" # @8.4.7
 
 pin "@rails/actioncable", to: "@rails--actioncable.js" # @7.1.3
+pin "stimulus-confetti" # @1.0.1
+pin "canvas-confetti" # @1.9.2
