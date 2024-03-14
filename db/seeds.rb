@@ -73,7 +73,7 @@ mentor7 = Mentor.create!(job_title: "Full-Stack developer", company: "Uber", rat
 # mentor1.user = user1
 
 # Create a mentee
-mentee1 = Mentee.create!(goal: "Find a job in webdevelopment within 6 moths", user: user8)
+mentee1 = Mentee.create!(goal: "Finish Le Wagon Amsterdam", user: user8)
 # mentee2 = Mentee.create!(goal: "I am going to become an experienced developer within 16 months", user: user3)
 # mentee3 = Mentee.create!(goal: "I am	going to find a front-end job in 6 months", user: user4)
 # mentee4 = Mentee.create!(goal: "I am going to become a full-stack developer within 1 year", user: user5)
@@ -109,10 +109,7 @@ chatroom = Chatroom.create!(connection: connection)
 # chatroom8 = Chatroom.create!(connection: connection8)
 
 # Create a task
-task1 = Task.create!(title: "Learn Ruby on Rails", description: "Start Le Wagon", end_date: "2024-03-15", completed: false, connection: connection)
-task2 = Task.create!(title: "Create a portfolio", description: "Add all projects to GitHub account", end_date: "2024-03-25", completed: false, connection: connection)
-task3 = Task.create!(title: "Learn JavaScript", description: "Follow JavaScript course", end_date: "2024-05-15", completed: false, connection: connection)
-task4 = Task.create!(title: "Go to webevent", description: "Follow ted talk in Rai", end_date: "2024-04-12", completed: false, connection: connection)
-task5 = Task.create!(title: "Update LinkedIn account", description: "Make sure all recent experienced is up to date", end_date: "2024-04-30", completed: false, connection: connection)
-task6 = Task.create!(title: "Upload CV on job search websites", description: "Magnet.me, Indeed, LinkedIn etc", end_date: "2024-03-24", completed: false, connection: connection)
-task7 = Task.create!(title: "Connect with recruiters", description: "send CV to 3 recruiters", end_date: "2024-05-10", completed: false, connection: connection)
+task1 = Task.create!(title: "Start Le Wagon", description: "Start Le Wagon", end_date: "2024-01-15", completed: true, connection: connection)
+task2 = Task.create!(title: "Learn Ruby", description: "Do challenges", end_date: "2024-01-30", completed: true, connection: connection)
+task3 = Task.create!(title: "Learn JavaScript", description: "Do flashcards", end_date: "2024-02-20", completed: true, connection: connection)
+task4 = Task.create!(title: "Learn CSS. HTML", description: "do challenges", end_date: "2024-02-29", completed: false, connection: connection)
