@@ -18,7 +18,7 @@
           <% end %>
           </span>
             <p><%= review.content %></p>
-            <p class="user-review"><em>-Unknown USER</em></p>
+            <p class="user-review"><em>-Anonymous</em></p>
             <hr class="mt-0 mb-4">
           <% end %>
       </div>
@@ -37,8 +37,7 @@
          <%= image_tag mentor.user.avatar_url, class:"avatar-swipe " %>
 
          <div id="popup-link"  data-action="click->reviews#show" data-mentor-id="<%= mentor.id %>">
-          <i id=star-review class="fas fa-star mt-3"></i>
-          <p id=star-review>View Reviews</p>
+          <p class="btn-ghost btn-submit btn-review justify-content-center" id=star-review><strong>Reviews</strong></p>
         </div>
 
       <form class="bio mt-4">
