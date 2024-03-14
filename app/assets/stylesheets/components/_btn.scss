@@ -178,8 +178,8 @@
 }
 
 #btn-pp {
-  width: 170px;
-  font-size: 12px;
+  width: 190px;
+  font-size: 1rem;
   margin-top: 20px;
   height: 35px;
 }
@@ -223,4 +223,9 @@
 .btn-secun {
   background-color: $light;
   color: $medium;
+}
+
+#createtask {
+  background-color: $medium;
+  color: $lighter;
 }
