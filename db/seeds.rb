@@ -33,10 +33,6 @@ user5 = User.create!(email: "Janis@hotmail.com",
         first_name: "Janis", last_name: "Jekabs Ivdris", avatar_url: "https://avatars.githubusercontent.com/u/82565025?v=4", location: "Amstelveen", bio: "Hey, I'm a Back-End Developer passionate about constructing robust server-side solutions. Proficient in languages like Python, Java, and frameworks like Django. From databases to APIs, I thrive on optimizing functionality behind the scenes. Let's bring efficiency to the digital realm, one line of code at a time! 🚀✨", password: "TEST001") #(MENTOR IN THE SWIPE)
 
 
-user6 = User.create!(email: "annak@hotmail.com",
-        first_name: "Anna", last_name: "Karsten", avatar_url:"https://avatars.githubusercontent.com/u/156093237?v=4", location: "Ouderkerk aan de Amstel", bio: "Greetings! I'm a dedicated product enthusiast committed to translating ideas into impactful solutions. With a passion for user-centric design and agile methodologies, I navigate the intersection of business goals and customer needs. Let's create products that resonate and drive meaningful change! 🌐✨", password: "TEST123") #(MENTOR IN THE SWIPE)
-
-
 user7 = User.create!(email: "romeew@hotmail.com",
         first_name: "Romee", last_name: "Weltevreden", avatar_url: "https://avatars.githubusercontent.com/u/156311823?v=4", location: "Amsterdam", bio: "Enthusiastic Fullstack Developer with a passion for building seamless web applications. Proficient in HTML, CSS, JavaScript, Node.js, and SQL/NoSQL databases. Committed to continuous learning, I thrive on solving complex problems and contributing to the developer community. Let's craft innovative solutions and shape the future of technology together! 💻✨", password: "TEST123") #(DEMO DAY mentor!! WILL BE THE SET UP CONNECION WITH MENTEE)
 
@@ -66,7 +62,6 @@ review1 = Review.create!(content: "Grateful for Jackie's help, can really recomm
 review2 = Review.create!(content: "Jackie was always available on the chat whenever I needed help during my tasks, very happy with having done this journey with her", rating: 5, mentor: mentor4)
 
 mentor5 = Mentor.create!(job_title: "Back-End Developer", company: "Amazon",  rating: 4, user: user5)
-mentor6 = Mentor.create!(job_title: "Product Owner", company: "Tesla",  rating: 5, user: user6)
 mentor7 = Mentor.create!(job_title: "Full-Stack developer", company: "Uber", rating: 4, user: user7)
 
 
