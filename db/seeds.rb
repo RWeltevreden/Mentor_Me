@@ -17,6 +17,7 @@ User.destroy_all
 
 # Create a user
 user1 = User.create!({ email: "maiia@hotmail.com",
+
   first_name: "Maiia", last_name: "Kuzmina", avatar_url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", location: "Amsterdam", bio: "Experienced freelance software developer with expertise in [programming languages/technologies]. From creating seamless user interfaces to building robust backend systems, I specialize in crafting efficient and scalable solutions. A problem solver at heart, I thrive on turning diverse concepts into high-quality code. Let's collaborate and bring your digital ideas to life!", password: "test123" })
 
 user2 = User.create!(email: "dogus@hotmail.com",
@@ -39,8 +40,6 @@ user7 = User.create!(email: "romeew@hotmail.com",
 
 user8 = User.create!(email: "annap@hotmail.com",
   first_name: "Anna", last_name: "Putt", avatar_url: "https://images.unsplash.com/photo-1568822617270-2c1579f8dfe2?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", location: "Amsterdam", bio:"Hello, I'm an aspiring developer embarking on a journey into the captivating world of coding. Armed with a zeal for learning, I'm diving into HTML, CSS, and JavaScript, eager to build my foundation. Excited to grow, collaborate, and turn imaginative ideas into tangible digital experiences.", password: "TEST123") #(DEMO DAY menteeeeeee (LOG IN WITH THIS ACCOUNT))
-
-
 
 # Create a mentor
 mentor1 = Mentor.create!(job_title: "Software Developer", company: "Freelancer", user: user1)
